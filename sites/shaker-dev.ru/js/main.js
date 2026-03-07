@@ -119,24 +119,6 @@
   }
 
   /* ----------------------------------------------------------------
-     Hero parallax on scroll
-  ---------------------------------------------------------------- */
-  var heroRight = document.getElementById('heroRight');
-
-  function onHeroParallax() {
-    if (!heroRight) return;
-    var sy = window.pageYOffset;
-    var translateY = sy * 0.12;
-    heroRight.style.WebkitTransform = 'translateY(' + translateY + 'px)';
-    heroRight.style.transform = 'translateY(' + translateY + 'px)';
-  }
-
-  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReducedMotion) {
-    window.addEventListener('scroll', onHeroParallax, { passive: true });
-  }
-
-  /* ----------------------------------------------------------------
      Smooth scroll for anchor links
   ---------------------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {

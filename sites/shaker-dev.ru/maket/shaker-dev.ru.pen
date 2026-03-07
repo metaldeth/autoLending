@@ -4656,7 +4656,7 @@
           "width": "fill_container",
           "fill": "#0B0F1A",
           "layout": "vertical",
-          "gap": 20,
+          "gap": 24,
           "padding": [
             40,
             24
@@ -4683,168 +4683,6 @@
             },
             {
               "type": "frame",
-              "id": "70lkt",
-              "name": "Case1",
-              "width": "fill_container",
-              "fill": "#131929",
-              "cornerRadius": 8,
-              "gap": 16,
-              "padding": 20,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "rectangle",
-                  "cornerRadius": 6,
-                  "id": "rXWv4",
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/shaker-site-3853.jpeg",
-                    "mode": "fill"
-                  },
-                  "width": 60,
-                  "height": 60
-                },
-                {
-                  "type": "frame",
-                  "id": "gl2q4",
-                  "name": "Text",
-                  "fill": "#00000000",
-                  "layout": "vertical",
-                  "gap": 4,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "9rqYZ",
-                      "fill": "#FFFFFF",
-                      "content": "Shaker Touch 2 / Shaker Milk",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "600"
-                    },
-                    {
-                      "type": "text",
-                      "id": "8RZUR",
-                      "fill": "#8B9CB5",
-                      "content": "Сенсорный экран, телеметрия, 20+ стран",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "x43kY",
-              "name": "Case2",
-              "width": "fill_container",
-              "fill": "#131929",
-              "cornerRadius": 8,
-              "gap": 16,
-              "padding": 20,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "rectangle",
-                  "cornerRadius": 6,
-                  "id": "RG4rZ",
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1772872951376.png",
-                    "mode": "fill"
-                  },
-                  "width": 60,
-                  "height": 60
-                },
-                {
-                  "type": "frame",
-                  "id": "NIl7M",
-                  "name": "Text",
-                  "fill": "#00000000",
-                  "layout": "vertical",
-                  "gap": 4,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "OLq9w",
-                      "fill": "#FFFFFF",
-                      "content": "IT-система Shaker",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "600"
-                    },
-                    {
-                      "type": "text",
-                      "id": "u8DCr",
-                      "fill": "#8B9CB5",
-                      "content": "Мониторинг, аналитика, управление онлайн",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "qWmVi",
-              "name": "Case3",
-              "width": "fill_container",
-              "fill": "#131929",
-              "cornerRadius": 8,
-              "gap": 16,
-              "padding": 20,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "rectangle",
-                  "cornerRadius": 6,
-                  "id": "huFsU",
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1772872952399.png",
-                    "mode": "fill"
-                  },
-                  "width": 60,
-                  "height": 60
-                },
-                {
-                  "type": "frame",
-                  "id": "NaYwm",
-                  "name": "Text",
-                  "fill": "#00000000",
-                  "layout": "vertical",
-                  "gap": 4,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "r5uvZ",
-                      "fill": "#FFFFFF",
-                      "content": "Партнёрский портал",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "600"
-                    },
-                    {
-                      "type": "text",
-                      "id": "vAtcz",
-                      "fill": "#8B9CB5",
-                      "content": "Промо-коды, лояльность, Telegram",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
               "id": "lpFsM",
               "name": "AllBtn",
               "width": "fill_container",
@@ -4865,6 +4703,174 @@
                   "fontFamily": "Inter",
                   "fontSize": 14,
                   "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HQ2gA",
+              "name": "Case1",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#131929",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "3BOzw",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/shaker-site-3853.jpeg",
+                    "mode": "fill"
+                  },
+                  "width": "fill_container",
+                  "height": 200
+                },
+                {
+                  "type": "frame",
+                  "id": "oWOW8",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UP7Og",
+                      "fill": "#FFFFFF",
+                      "content": "Shaker Touch 2 / Shaker Milk",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vMWro",
+                      "fill": "#8B9CB5",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Аппараты с сенсорным экраном и встроенной телеметрией. Присутствие в 20+ странах.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kxuHv",
+              "name": "Case2",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#131929",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "bVxOn",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772872951376.png",
+                    "mode": "fill"
+                  },
+                  "width": "fill_container",
+                  "height": 200
+                },
+                {
+                  "type": "frame",
+                  "id": "SYg8r",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6ct7I",
+                      "fill": "#FFFFFF",
+                      "content": "IT-система Shaker",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZN18t",
+                      "fill": "#8B9CB5",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Мониторинг всех аппаратов в реальном времени. Аналитика продаж и управление ценами онлайн.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iR57n",
+              "name": "Case3",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#131929",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "VjjyB",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772872952399.png",
+                    "mode": "fill"
+                  },
+                  "width": "fill_container",
+                  "height": 200
+                },
+                {
+                  "type": "frame",
+                  "id": "hmD9I",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PVF4q",
+                      "fill": "#FFFFFF",
+                      "content": "Партнёрский портал",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qIYjA",
+                      "fill": "#8B9CB5",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Личный кабинет с промо-кодами, программой лояльности и интеграцией с Telegram.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
                 }
               ]
             }
@@ -6249,7 +6255,7 @@
           "width": "fill_container",
           "fill": "#FFFFFF",
           "layout": "vertical",
-          "gap": 20,
+          "gap": 24,
           "padding": [
             40,
             24
@@ -6276,168 +6282,6 @@
             },
             {
               "type": "frame",
-              "id": "D1fXG",
-              "name": "Case1",
-              "width": "fill_container",
-              "fill": "#F4F6FA",
-              "cornerRadius": 8,
-              "gap": 16,
-              "padding": 20,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "rectangle",
-                  "cornerRadius": 6,
-                  "id": "qOTI5",
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/shaker-site-3853.jpeg",
-                    "mode": "fill"
-                  },
-                  "width": 60,
-                  "height": 60
-                },
-                {
-                  "type": "frame",
-                  "id": "rufH9",
-                  "name": "Text",
-                  "fill": "#00000000",
-                  "layout": "vertical",
-                  "gap": 4,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "zI5LV",
-                      "fill": "#0B0F1A",
-                      "content": "Shaker Touch 2 / Shaker Milk",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "600"
-                    },
-                    {
-                      "type": "text",
-                      "id": "2CupY",
-                      "fill": "#4A5568",
-                      "content": "Сенсорный экран, телеметрия, 20+ стран",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "Y8yLc",
-              "name": "Case2",
-              "width": "fill_container",
-              "fill": "#F4F6FA",
-              "cornerRadius": 8,
-              "gap": 16,
-              "padding": 20,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "rectangle",
-                  "cornerRadius": 6,
-                  "id": "UPWYb",
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1772872951376.png",
-                    "mode": "fill"
-                  },
-                  "width": 60,
-                  "height": 60
-                },
-                {
-                  "type": "frame",
-                  "id": "H0TES",
-                  "name": "Text",
-                  "fill": "#00000000",
-                  "layout": "vertical",
-                  "gap": 4,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "kUkzE",
-                      "fill": "#0B0F1A",
-                      "content": "IT-система Shaker",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "600"
-                    },
-                    {
-                      "type": "text",
-                      "id": "jDXWy",
-                      "fill": "#4A5568",
-                      "content": "Мониторинг, аналитика, управление онлайн",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "9flDW",
-              "name": "Case3",
-              "width": "fill_container",
-              "fill": "#F4F6FA",
-              "cornerRadius": 8,
-              "gap": 16,
-              "padding": 20,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "rectangle",
-                  "cornerRadius": 6,
-                  "id": "wRQZA",
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1772872952399.png",
-                    "mode": "fill"
-                  },
-                  "width": 60,
-                  "height": 60
-                },
-                {
-                  "type": "frame",
-                  "id": "uQ7UD",
-                  "name": "Text",
-                  "fill": "#00000000",
-                  "layout": "vertical",
-                  "gap": 4,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "ZvheX",
-                      "fill": "#0B0F1A",
-                      "content": "Партнёрский портал",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "600"
-                    },
-                    {
-                      "type": "text",
-                      "id": "kDrcM",
-                      "fill": "#4A5568",
-                      "content": "Промо-коды, лояльность, Telegram",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
               "id": "ayFS2",
               "name": "allBtnLight",
               "width": "fill_container",
@@ -6458,6 +6302,174 @@
                   "fontFamily": "Inter",
                   "fontSize": 14,
                   "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rMD36",
+              "name": "Case1",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "bi0Xb",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/shaker-site-3853.jpeg",
+                    "mode": "fill"
+                  },
+                  "width": "fill_container",
+                  "height": 200
+                },
+                {
+                  "type": "frame",
+                  "id": "lWQXA",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0rE2i",
+                      "fill": "#0B0F1A",
+                      "content": "Shaker Touch 2 / Shaker Milk",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8UBKU",
+                      "fill": "#4A5568",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Аппараты с сенсорным экраном и встроенной телеметрией. Присутствие в 20+ странах.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tTxLv",
+              "name": "Case2",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "Ri7g8",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772872951376.png",
+                    "mode": "fill"
+                  },
+                  "width": "fill_container",
+                  "height": 200
+                },
+                {
+                  "type": "frame",
+                  "id": "enaNs",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x1lNT",
+                      "fill": "#0B0F1A",
+                      "content": "IT-система Shaker",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "9cUNf",
+                      "fill": "#4A5568",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Мониторинг всех аппаратов в реальном времени. Аналитика продаж и управление ценами онлайн.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Qm7cd",
+              "name": "Case3",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "WefDi",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1772872952399.png",
+                    "mode": "fill"
+                  },
+                  "width": "fill_container",
+                  "height": 200
+                },
+                {
+                  "type": "frame",
+                  "id": "jNP3C",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7tlsv",
+                      "fill": "#0B0F1A",
+                      "content": "Партнёрский портал",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "89Epi",
+                      "fill": "#4A5568",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Личный кабинет с промо-кодами, программой лояльности и интеграцией с Telegram.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
                 }
               ]
             }
