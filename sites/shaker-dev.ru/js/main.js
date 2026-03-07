@@ -10,7 +10,6 @@
   function getInitialTheme() {
     var stored = localStorage.getItem('theme');
     if (stored === 'light' || stored === 'dark') return stored;
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
     return 'dark';
   }
 

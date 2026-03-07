@@ -9,12 +9,23 @@ description: Deploy any site from this repo to reg.ru hosting via SFTP. Use when
 
 ## Быстрый деплой
 
+Используй Task tool с `subagent_type: "shell"`, `model: "fast"`:
+
+```
+Выполни деплой сайта <SITE_NAME> на reg.ru.
+Команда: python ".cursor/skills/deploy-reg-ru/deploy.py" "<SITE_NAME>"
+Рабочая директория: c:\dev\nefedov.tech
+Дождись завершения. Верни вывод скрипта и финальный URL.
+```
+
+Или напрямую:
+
 ```bash
-cd /path/to/repo
+cd c:\dev\nefedov.tech
 python .cursor/skills/deploy-reg-ru/deploy.py nefedov.tech
 ```
 
-Аргумент — имя папки сайта в `sites/`. Скрипт читает `sites/<имя>/deploy.env` и заливает файлы. ~5 сек.
+Аргумент — имя папки сайта в `sites/`. Скрипт читает `sites/<имя>/deploy.env` и заливает файлы. ~5–30 сек.
 
 ## deploy.env в папке сайта
 

@@ -384,7 +384,9 @@ button {
   display: flex;
   align-items: center;
   min-height: 700px;
-  padding: 72px 80px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 72px 120px 0;
   background-color: var(--bg);
   overflow: hidden;
 }

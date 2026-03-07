@@ -61,7 +61,7 @@ def main():
         "site.webmanifest",
         "og-image.png",
     ]
-    DEPLOY_DIRS = ["css", "js"]
+    DEPLOY_DIRS = ["css", "js", "images"]
 
     # ── SFTP helpers ────────────────────────────────────────────────────────────
 
