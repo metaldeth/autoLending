@@ -1,0 +1,40 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "9GbFX",
+      "x": 100,
+      "y": 100,
+      "name": "Test Frame",
+      "width": 800,
+      "height": 600,
+      "fill": "#E8E8E8",
+      "layout": "vertical",
+      "gap": 16,
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "FYAQ5",
+          "name": "label",
+          "fill": "#333333",
+          "content": "Test Frame",
+          "fontFamily": "Inter",
+          "fontSize": 24,
+          "fontWeight": "bold"
+        },
+        {
+          "type": "text",
+          "id": "cRhtq",
+          "name": "subtext",
+          "fill": "#666666",
+          "content": "Pencil test — shaker-dev.ru",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    }
+  ]
+}
