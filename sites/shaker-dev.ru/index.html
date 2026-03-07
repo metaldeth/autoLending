@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разработка умных устройств под ключ | 10 лет опыта, экспорт в 20 стран</title>
+  <meta name="description" content="Команда разработчиков с 10-летним стажем создаёт сложные hardware+software продукты. Сами экспортируем в 20 стран. Поможем вам — от идеи до серии. Бережливо, надёжно, с применением ИИ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shaker-dev.ru/">
+  <meta property="og:title" content="Разработка умных устройств под ключ | Shaker Dev">
+  <meta property="og:description" content="Команда разработчиков с 10-летним стажем. Экспорт в 20 стран. От идеи до серии — бережливо, надёжно.">
+  <meta property="og:image" content="https://shaker-dev.ru/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', stored || preferred);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <a href="#" class="header__logo" aria-label="На главную">
+      <span class="header__logo-text">SHAKER</span><span class="header__logo-mono">.DEV</span>
+    </a>
+    <nav class="header__nav" aria-label="Основное меню">
+      <a href="#trust" class="header__link">Почему нам доверяют</a>
+      <a href="#process" class="header__link">Как работаем</a>
+      <a href="#competencies" class="header__link">Компетенции</a>
+      <a href="#portfolio" class="header__link">Кейсы</a>
+      <a href="#contacts" class="header__link">Контакты</a>
+    </nav>
+    <div class="header__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" type="button">
+        <span class="theme-toggle__track">
+          <span class="theme-toggle__thumb"></span>
+        </span>
+      </button>
+      <a href="#contacts" class="btn btn--primary header__cta">Обсудить проект</a>
+    </div>
+    <button class="header__burger" id="burger" aria-label="Открыть меню" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ========== MOBILE MENU ========== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__inner">
+      <button class="mobile-menu__close" id="menuClose" aria-label="Закрыть меню" type="button">
+        <span></span><span></span>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="#trust" class="mobile-menu__link">Почему нам доверяют</a>
+        <a href="#process" class="mobile-menu__link">Как работаем</a>
+        <a href="#competencies" class="mobile-menu__link">Компетенции</a>
+        <a href="#portfolio" class="mobile-menu__link">Кейсы</a>
+        <a href="#contacts" class="mobile-menu__link">Контакты</a>
+      </nav>
+      <div class="mobile-menu__theme">
+        <button class="mobile-menu__theme-btn" data-theme="dark" type="button">Тёмная</button>
+        <button class="mobile-menu__theme-btn" data-theme="light" type="button">Светлая</button>
+      </div>
+      <a href="#contacts" class="btn btn--primary mobile-menu__cta">Обсудить проект</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <span class="hero__badge">Hardware + Software</span>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Создаём умные устройства,</span>
+          <span class="hero__title-line">которые продаются по всему миру</span>
+        </h1>
+        <p class="hero__sub">
+          Команда с 10-летним опытом. Сами разработали продукт и экспортируем в 20 стран. Поможем вам пройти путь от идеи до серии — быстро, бережливо, без подводных камней.
+        </p>
+        <div class="hero__cta">
+          <a href="#contacts" class="btn btn--primary">Обсудить проект</a>
+          <a href="#portfolio" class="btn btn--outline">Кейсы</a>
+        </div>
+      </div>
+      <div class="hero__visual scroll-reveal">
+        <div class="hero__map" aria-hidden="true">
+          <svg class="hero__map-svg" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path class="hero__map-land" d="M100 120 L200 100 L350 130 L500 90 L700 110 L750 200 L700 280 L500 300 L350 270 L200 290 L100 250 Z" fill="currentColor" opacity="0.08"/>
+            <circle class="hero__map-dot" cx="380" cy="180" r="4" fill="var(--accent)"/>
+            <circle class="hero__map-dot" cx="420" cy="160" r="3" fill="var(--accent)"/>
+            <circle class="hero__map-dot" cx="350" cy="200" r="3" fill="var(--accent)"/>
+            <circle class="hero__map-dot" cx="450" cy="220" r="3" fill="var(--accent)"/>
+            <circle class="hero__map-dot" cx="300" cy="150" r="3" fill="var(--accent)"/>
+            <circle class="hero__map-dot" cx="500" cy="170" r="3" fill="var(--accent)"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRUST ========== -->
+    <section class="section trust" id="trust">
+      <h2 class="section__title">Почему нам доверяют</h2>
+      <div class="trust__grid">
+        <article class="trust__card scroll-reveal">
+          <span class="trust__num">20</span>
+          <h3 class="trust__heading">Экспортный уровень</h3>
+          <p class="trust__text">Наш продукт работает в 20 развитых странах. Знаем требования мирового рынка.</p>
+        </article>
+        <article class="trust__card scroll-reveal">
+          <span class="trust__num">$0</span>
+          <h3 class="trust__heading">Бережливость</h3>
+          <p class="trust__text">Создали продукт без внешних бюджетов — умеем экономить ваши деньги.</p>
+        </article>
+        <article class="trust__card scroll-reveal">
+          <span class="trust__num">10Y</span>
+          <h3 class="trust__heading">10 лет в России</h3>
+          <p class="trust__text">Знаем локальные подводные камни и как их обойти.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== PROCESS ========== -->
+    <section class="section process" id="process">
+      <h2 class="section__title">Мы не просто исполнители, а партнёры</h2>
+      <div class="process__steps">
+        <article class="process__step scroll-reveal">
+          <span class="process__num">01</span>
+          <h3 class="process__heading">Погружение</h3>
+          <p class="process__text">Изучаем вашу идею, рынок, пользователей.</p>
+        </article>
+        <article class="process__step scroll-reveal">
+          <span class="process__num">02</span>
+          <h3 class="process__heading">Тестирование гипотез</h3>
+          <p class="process__text">Быстрые прототипы, обратная связь.</p>
+        </article>
+        <article class="process__step scroll-reveal">
+          <span class="process__num">03</span>
+          <h3 class="process__heading">Умный ИИ</h3>
+          <p class="process__text">Применяем там, где это реально ускоряет и удешевляет.</p>
+        </article>
+        <article class="process__step scroll-reveal">
+          <span class="process__num">04</span>
+          <h3 class="process__heading">Передача в производство</h3>
+          <p class="process__text">Ведём к проверенным партнёрам.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== COMPETENCIES ========== -->
+    <section class="section competencies" id="competencies">
+      <h2 class="section__title">Что мы умеем</h2>
+      <div class="competencies__grid">
+        <article class="competencies__col scroll-reveal">
+          <h3 class="competencies__col-title">Hardware</h3>
+          <ul class="competencies__list">
+            <li>Разработка плат электроники и жгутов</li>
+            <li>Датчики, сенсоры, микроконтроллеры</li>
+            <li>Отладка и прототипирование</li>
+          </ul>
+        </article>
+        <article class="competencies__col scroll-reveal">
+          <h3 class="competencies__col-title">Software</h3>
+          <ul class="competencies__list">
+            <li>Встраиваемое ПО (C/C++, Linux)</li>
+            <li>Бэкенд для IoT и облачные платформы</li>
+            <li>Фронтенд и мобильные приложения</li>
+          </ul>
+        </article>
+        <article class="competencies__col scroll-reveal">
+          <h3 class="competencies__col-title">Дизайн и производство</h3>
+          <ul class="competencies__list">
+            <li>3D-моделирование и промышленный дизайн</li>
+            <li>UX/UI интерфейсов</li>
+            <li>Конструкторская документация</li>
+            <li>Производство металлоизделий</li>
+            <li>Координация серийного выпуска</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== ADVANTAGES ========== -->
+    <section class="section advantages" id="advantages">
+      <h2 class="section__title">Мы снимаем ваши риски</h2>
+      <div class="advantages__wrap">
+        <div class="advantages__intro scroll-reveal">
+          <p class="advantages__lead">Один подрядчик на всё — от электроники до металла. Быстрый запуск, тестирование на рынке, доработка.</p>
+        </div>
+        <ul class="advantages__list">
+          <li class="advantages__item scroll-reveal">
+            <strong>Сеть партнёров.</strong> Перебрали сотни подрядчиков по России — знаем, кто делает качественно, а с кем лучше не связываться.
+          </li>
+          <li class="advantages__item scroll-reveal">
+            <strong>Комплекс.</strong> Один подрядчик на всё — от электроники до металла.
+          </li>
+          <li class="advantages__item scroll-reveal">
+            <strong>MVP под ключ.</strong> Быстрый запуск, тестирование на рынке, доработка.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== PORTFOLIO ========== -->
+    <section class="section portfolio" id="portfolio">
+      <h2 class="section__title">Примеры наших работ</h2>
+      <div class="portfolio__grid">
+        <article class="portfolio__card scroll-reveal">
+          <h3 class="portfolio__card-title">Вендинговые аппараты</h3>
+          <p class="portfolio__card-desc">Сенсорный экран и телеметрия. Экспорт в 20 стран.</p>
+        </article>
+        <article class="portfolio__card scroll-reveal">
+          <h3 class="portfolio__card-title">IoT-платформа</h3>
+          <p class="portfolio__card-desc">Удалённый мониторинг оборудования.</p>
+        </article>
+        <article class="portfolio__card scroll-reveal">
+          <h3 class="portfolio__card-title">Быстрый MVP</h3>
+          <p class="portfolio__card-desc">От идеи до пилота за 4 месяца для стартапа.</p>
+        </article>
+      </div>
+      <p class="portfolio__cta-wrap">
+        <a href="#contacts" class="btn btn--outline">Смотреть все проекты</a>
+      </p>
+    </section>
+
+    <!-- ========== PRODUCTION ========== -->
+    <section class="section production" id="production">
+      <h2 class="section__title">Готовое производство без головной боли</h2>
+      <div class="production__content scroll-reveal">
+        <p class="production__text">
+          Мы наладили связи с лучшими производствами в разных регионах России. За 10 лет отсеяли сотни контрагентов. Приходите с идеей — получите готовое изделие, сделанное там, где это действительно качественно и недорого.
+        </p>
+        <div class="production__stats">
+          <span class="production__stat"><strong>10</strong> лет</span>
+          <span class="production__stat"><strong>20</strong> стран</span>
+          <span class="production__stat"><strong>1</strong> подрядчик</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTS ========== -->
+    <section class="section contacts" id="contacts">
+      <h2 class="section__title">Начнём путь к мировому рынку?</h2>
+      <div class="contacts__wrap">
+        <div class="contacts__text scroll-reveal">
+          <p>Не берём проекты, в которые не верим. Но если берём — погружаемся полностью.</p>
+        </div>
+        <form class="contacts__form scroll-reveal" id="contactForm" action="#" method="post">
+          <label class="contacts__label">
+            <span class="contacts__label-text">Имя</span>
+            <input type="text" name="name" class="contacts__input" placeholder="Как к вам обращаться" required>
+          </label>
+          <label class="contacts__label">
+            <span class="contacts__label-text">Телефон / Telegram</span>
+            <input type="tel" name="phone" class="contacts__input" placeholder="+7 или @nickname" required>
+          </label>
+          <label class="contacts__label">
+            <span class="contacts__label-text">Описание идеи</span>
+            <textarea name="idea" class="contacts__textarea" placeholder="Кратко опишите проект" rows="4"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary contacts__submit">Отправить заявку</button>
+          <p class="contacts__form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="#" class="footer__logo">
+        <span class="header__logo-text">SHAKER</span><span class="header__logo-mono">.DEV</span>
+      </a>
+      <nav class="footer__nav">
+        <a href="#trust" class="footer__link">Почему нам доверяют</a>
+        <a href="#process" class="footer__link">Как работаем</a>
+        <a href="#competencies" class="footer__link">Компетенции</a>
+        <a href="#portfolio" class="footer__link">Кейсы</a>
+        <a href="#contacts" class="footer__link">Контакты</a>
+      </nav>
+      <p class="footer__copy">&copy; Shaker Dev</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
