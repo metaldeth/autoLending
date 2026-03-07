@@ -1,26 +1,22 @@
-# nefedov.tech
+# Репозиторий лендингов
 
-Personal portfolio site — [nefedov.tech](https://nefedov.tech)
+Один репозиторий для нескольких статических лендингов: общие правила в `.cursor/`, каждый сайт — в своей папке в `sites/`.
 
-## Stack
+## Структура
 
-- Pure HTML + CSS + JS (no frameworks, no build step)
-- Fonts: Inter + Space Mono (Google Fonts)
-- Deploy: SFTP to reg.ru hosting
+- **`.cursor/`** — правила Cursor, скрипты деплоя, навыки. Можно копировать в другой репозиторий.
+- **`sites/<сайт>/`** — один лендинг: папка `maket/` (макеты) и файлы реализации в корне папки (`index.html`, `css/`, `js/`, ассеты).
 
-## Structure
+Подробнее: [.cursor/rules/workspace.mdc](.cursor/rules/workspace.mdc)
 
-```
-sites/nefedov.tech/   — site files (index.html, css/, js/, etc.)
-.cursor/skills/deploy-nefedov-tech/ — deploy script + config
-```
+## Деплой
 
-## Deploy
+Из корня репозитория:
 
 ```bash
-# 1. Copy deploy.env.example to deploy.env and fill credentials
-# 2. Run:
-python .cursor/skills/deploy-nefedov-tech/deploy.py
+python .cursor/skills/deploy-reg-ru/deploy.py <имя-сайта>
 ```
 
-See [DEPLOY.md](DEPLOY.md) and `.cursor/skills/deploy-nefedov-tech/SKILL.md` for details.
+Пример: `python .cursor/skills/deploy-reg-ru/deploy.py nefedov.tech`
+
+У каждого сайта свой `sites/<сайт>/deploy.env` (креды SFTP и SITE_URL). См. [DEPLOY.md](DEPLOY.md) и [.cursor/skills/deploy-reg-ru/SKILL.md](.cursor/skills/deploy-reg-ru/SKILL.md).

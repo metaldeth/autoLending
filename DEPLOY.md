@@ -1,9 +1,9 @@
-# Deploy
+# Деплой
 
-Все скрипты деплоя перенесены в `.cursor/skills/deploy-nefedov-tech/`.
+Репозиторий лендингов. У каждого сайта свой `deploy.env` в `sites/<сайт>/deploy.env`. Деплой по имени сайта:
 
 ```bash
-python .cursor/skills/deploy-nefedov-tech/deploy.py
+python .cursor/skills/deploy-reg-ru/deploy.py nefedov.tech
 ```
 
-Подробная документация: `.cursor/skills/deploy-nefedov-tech/SKILL.md`
+Подробно: [.cursor/skills/deploy-reg-ru/SKILL.md](.cursor/skills/deploy-reg-ru/SKILL.md)

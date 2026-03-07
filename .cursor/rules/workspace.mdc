@@ -16,7 +16,7 @@ alwaysApply: true
     project.mdc             # Стек, CSS/JS, кросс-браузерность
     workspace.mdc           # Этот файл — организация рабочего пространства
   skills/
-    deploy-nefedov-tech/    # Деплой по SFTP (reg.ru)
+    deploy-reg-ru/         # Общий деплой на reg.ru по SFTP
       deploy.py
       deploy.env
       deploy.env.example
@@ -24,6 +24,7 @@ alwaysApply: true
 
 sites/                      # Папки с сайтами
   <имя-сайта>/              # Один лендинг = одна папка (домен или slug)
+    deploy.env              # Креды SFTP и SITE_URL (не коммитить)
     maket/                  # Макет: .pen, экспорты из Figma, референсы
     index.html              # Реализация: HTML, CSS, JS, ассеты
     css/
@@ -41,6 +42,6 @@ sites/                      # Папки с сайтами
 
 3. **Общие вещи** не класть в папку сайта: скрипты деплоя, правила Cursor — только в `.cursor/`.
 
-4. **Новый сайт:** создать `sites/<новый-сайт>/maket/` и файлы реализации в `sites/<новый-сайт>/`. В `.cursor/skills/deploy-nefedov-tech/deploy.env` задать `LOCAL_SITE=sites/<новый-сайт>`, `REMOTE_DIR=...`, `SITE_URL=...`. При необходимости поправить списки `DEPLOY_FILES` и `DEPLOY_DIRS` в `deploy.py`.
+4. **Новый сайт:** создать `sites/<новый-сайт>/maket/`, файлы реализации и `sites/<новый-сайт>/deploy.env` (креды SFTP, REMOTE_DIR, SITE_URL; шаблон в `.cursor/skills/deploy-reg-ru/deploy.env.example`). Деплой: `python deploy.py <новый-сайт>`.
 
 5. **Деплой** всегда идёт из папки сайта, указанной в `LOCAL_SITE`; `SITE_URL` из `.env` используется в сообщениях и проверках.

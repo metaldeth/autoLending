@@ -1,5 +1,5 @@
-# Credentials — never commit
-.cursor/skills/deploy-nefedov-tech/deploy.env
+# Credentials — never commit (у каждого сайта свой deploy.env)
+sites/*/deploy.env
 
 # Python
 __pycache__/

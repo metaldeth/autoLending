@@ -13,7 +13,7 @@ alwaysApply: true
 
 - Pure HTML + CSS + JS, no frameworks, no build step
 - Fonts: `Inter` (body) + `Space Mono` (mono/accent) from Google Fonts
-- Deploy via SFTP to reg.ru hosting (see `.cursor/skills/deploy-nefedov-tech/`)
+- Deploy via SFTP to reg.ru — общий скрипт в `.cursor/skills/deploy-reg-ru/`. У каждого сайта свой `sites/<сайт>/deploy.env` (креды SFTP, REMOTE_DIR, SITE_URL). Запуск: `python deploy.py <имя-сайта>`.
 
 ## CSS Conventions
 
@@ -53,17 +53,16 @@ These are known pitfalls — always apply them proactively:
 
 ## Deploy
 
-All deploy tooling lives in `.cursor/skills/deploy-nefedov-tech/`:
-- `deploy.py` — SFTP upload script (requires `paramiko`)
-- `deploy.env` — credentials (never commit this file; add to `.gitignore`)
+All deploy tooling lives in `.cursor/skills/deploy-reg-ru/`:
+- `deploy.py` — общий SFTP-скрипт для reg.ru (requires `paramiko`). Запуск: `python deploy.py <имя-сайта>`.
+- У каждого сайта свой `sites/<сайт>/deploy.env` (HOST, USER, PASS, REMOTE_DIR, SITE_URL). Не коммитить.
 
-Quick deploy:
+Деплой:
 ```bash
-python .cursor/skills/deploy-nefedov-tech/deploy.py
+python .cursor/skills/deploy-reg-ru/deploy.py nefedov.tech
 ```
 
-For a **new project**: update `deploy.env` with new HOST, USER, PASS, REMOTE_DIR.
-Update `DEPLOY_FILES` and `DEPLOY_DIRS` lists in `deploy.py` to match the new project structure.
+Новый сайт — создать `sites/<новый>/deploy.env` (шаблон: `deploy.env.example`). Другой набор файлов — правь `deploy.py` или делаем отдельное решение.
 
 ## Cross-browser Testing (Playwright)
 
