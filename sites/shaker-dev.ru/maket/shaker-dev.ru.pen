@@ -27,15 +27,39 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "cAbpl",
-              "name": "Logo",
-              "fill": "#FFFFFF",
-              "content": "SHAKER.DEV",
-              "fontFamily": "Space Mono",
-              "fontSize": 18,
-              "fontWeight": "bold",
-              "letterSpacing": 2
+              "type": "frame",
+              "id": "R4bU5",
+              "name": "Brand",
+              "fill": "#00000000",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "y6CC5",
+                  "name": "LogoIcon",
+                  "width": 40,
+                  "height": 35,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./logo-green.png",
+                    "mode": "fit"
+                  },
+                  "layout": "none"
+                },
+                {
+                  "type": "text",
+                  "id": "cAbpl",
+                  "name": "Logo",
+                  "fill": "#FFFFFF",
+                  "content": "SHAKER.DEV",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                  "letterSpacing": 2
+                }
+              ]
             },
             {
               "type": "frame",
@@ -1856,15 +1880,39 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "GETlK",
-              "name": "Logo",
-              "fill": "#0B0F1A",
-              "content": "SHAKER.DEV",
-              "fontFamily": "Space Mono",
-              "fontSize": 18,
-              "fontWeight": "bold",
-              "letterSpacing": 2
+              "type": "frame",
+              "id": "wQx1C",
+              "name": "Brand",
+              "fill": "#00000000",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jPBPg",
+                  "name": "LogoIcon",
+                  "width": 40,
+                  "height": 35,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./logo-green.png",
+                    "mode": "fit"
+                  },
+                  "layout": "none"
+                },
+                {
+                  "type": "text",
+                  "id": "GETlK",
+                  "name": "Logo",
+                  "fill": "#0B0F1A",
+                  "content": "SHAKER.DEV",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                  "letterSpacing": 2
+                }
+              ]
             },
             {
               "type": "frame",
@@ -3684,14 +3732,38 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "imbdR",
-              "fill": "#FFFFFF",
-              "content": "SHAKER.DEV",
-              "fontFamily": "Space Mono",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "letterSpacing": 1
+              "type": "frame",
+              "id": "Zd38m",
+              "name": "Brand",
+              "fill": "#00000000",
+              "gap": 7,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "H6vjy",
+                  "name": "LogoIcon",
+                  "width": 40,
+                  "height": 35,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./logo-green.png",
+                    "mode": "fit"
+                  },
+                  "layout": "none"
+                },
+                {
+                  "type": "text",
+                  "id": "imbdR",
+                  "fill": "#FFFFFF",
+                  "content": "SHAKER.DEV",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 14,
+                  "fontWeight": "bold",
+                  "letterSpacing": 1
+                }
+              ]
             },
             {
               "type": "frame",
@@ -5284,14 +5356,38 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "eJcVA",
-              "fill": "#0B0F1A",
-              "content": "SHAKER.DEV",
-              "fontFamily": "Space Mono",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "letterSpacing": 1
+              "type": "frame",
+              "id": "17kx7",
+              "name": "Brand",
+              "fill": "#00000000",
+              "gap": 7,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9NWFW",
+                  "name": "LogoIcon",
+                  "width": 40,
+                  "height": 35,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./logo-green.png",
+                    "mode": "fit"
+                  },
+                  "layout": "none"
+                },
+                {
+                  "type": "text",
+                  "id": "eJcVA",
+                  "fill": "#0B0F1A",
+                  "content": "SHAKER.DEV",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 14,
+                  "fontWeight": "bold",
+                  "letterSpacing": 1
+                }
+              ]
             },
             {
               "type": "frame",
@@ -6917,611 +7013,6 @@
           "fontFamily": "Space Mono",
           "fontSize": 12,
           "fontWeight": "normal"
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "tZ4gt",
-      "x": 4420,
-      "y": 0,
-      "name": "Акцент #66B22E",
-      "width": 2920,
-      "height": 772,
-      "gap": 48,
-      "children": [
-        {
-          "type": "frame",
-          "id": "rcaam",
-          "name": "Тёмная тема",
-          "width": 1440,
-          "height": "fill_container",
-          "layout": "vertical",
-          "children": [
-            {
-              "type": "frame",
-              "id": "X8DUX",
-              "name": "darkHeader",
-              "width": "fill_container",
-              "height": 72,
-              "fill": "#0B0F1A",
-              "padding": [
-                0,
-                120
-              ],
-              "justifyContent": "space_between",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "optKk",
-                  "name": "Logo",
-                  "fill": "#FFFFFF",
-                  "content": "SHAKER.DEV",
-                  "fontFamily": "Space Mono",
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                  "letterSpacing": 2
-                },
-                {
-                  "type": "frame",
-                  "id": "svfa0",
-                  "name": "Nav",
-                  "fill": "#00000000",
-                  "gap": 40,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "ivJZS",
-                      "fill": "#8B9CB5",
-                      "content": "О нас",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "2zdPY",
-                      "fill": "#8B9CB5",
-                      "content": "Компетенции",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "WWmh2",
-                      "fill": "#8B9CB5",
-                      "content": "Кейсы",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "jAQeB",
-                      "fill": "#8B9CB5",
-                      "content": "Контакты",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "OnLyZ",
-                  "name": "Actions",
-                  "fill": "#00000000",
-                  "gap": 16,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "Eu9XV",
-                      "name": "ThemeToggle",
-                      "width": 52,
-                      "height": 28,
-                      "fill": "#131929",
-                      "cornerRadius": 14,
-                      "padding": 3,
-                      "justifyContent": "end",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "qx7ES",
-                          "name": "Knob",
-                          "fill": "#66B22E",
-                          "width": 22,
-                          "height": 22
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "PKfjk",
-                      "name": "CTA",
-                      "fill": "#66B22E",
-                      "cornerRadius": 6,
-                      "padding": [
-                        10,
-                        24
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "zmCKx",
-                          "fill": "#0B0F1A",
-                          "content": "Обсудить проект",
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "MhXDi",
-              "name": "darkHero",
-              "width": "fill_container",
-              "height": 700,
-              "fill": "#0B0F1A",
-              "padding": [
-                0,
-                80
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "2CadE",
-                  "name": "HeroLeft",
-                  "width": 580,
-                  "height": "fill_container",
-                  "fill": "#00000000",
-                  "layout": "vertical",
-                  "gap": 32,
-                  "justifyContent": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "CSQap",
-                      "name": "Badge",
-                      "fill": "#00000000",
-                      "cornerRadius": 4,
-                      "gap": 8,
-                      "padding": [
-                        6,
-                        14
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "rectangle",
-                          "cornerRadius": 3,
-                          "id": "nNLgw",
-                          "fill": "#66B22E",
-                          "width": 6,
-                          "height": 6
-                        },
-                        {
-                          "type": "text",
-                          "id": "dOAZ7",
-                          "fill": "#66B22E",
-                          "content": "10 лет опыта · Экспорт в 20 стран",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 12,
-                          "fontWeight": "normal",
-                          "letterSpacing": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "s69IL",
-                      "name": "H1",
-                      "fill": "#FFFFFF",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "Создаём умные устройства, которые продаются по всему миру",
-                      "lineHeight": 1.15,
-                      "fontFamily": "Inter",
-                      "fontSize": 48,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "6sUoQ",
-                      "name": "Sub",
-                      "fill": "#8B9CB5",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "Команда с 10-летним опытом. Сами разработали продукт и экспортируем в 20 стран. Поможем вам пройти путь от идеи до серии — быстро, бережливо, без подводных камней.",
-                      "lineHeight": 1.6,
-                      "fontFamily": "Inter",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "xOej1",
-                      "name": "CTAs",
-                      "fill": "#00000000",
-                      "gap": 16,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "XsHDl",
-                          "name": "PrimaryBtn",
-                          "fill": "#66B22E",
-                          "cornerRadius": 6,
-                          "padding": [
-                            14,
-                            28
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "lSuoh",
-                              "fill": "#0B0F1A",
-                              "content": "Обсудить проект",
-                              "fontFamily": "Inter",
-                              "fontSize": 15,
-                              "fontWeight": "600"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "npEBQ",
-                          "name": "SecondaryBtn",
-                          "fill": "#00000000",
-                          "cornerRadius": 6,
-                          "padding": [
-                            14,
-                            28
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "o67Nv",
-                              "fill": "#8B9CB5",
-                              "content": "Кейсы →",
-                              "fontFamily": "Inter",
-                              "fontSize": 15,
-                              "fontWeight": "normal"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "ig9cS",
-                  "name": "HeroRight",
-                  "width": "fill_container",
-                  "height": "fill_container",
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1772872447189.png",
-                    "mode": "fill"
-                  },
-                  "layout": "vertical",
-                  "justifyContent": "center",
-                  "alignItems": "center"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "3N9l3",
-          "name": "Светлая тема",
-          "width": 1440,
-          "height": "fill_container",
-          "layout": "vertical",
-          "children": [
-            {
-              "type": "frame",
-              "id": "rcW7x",
-              "name": "lightHeader",
-              "width": "fill_container",
-              "height": 72,
-              "fill": "#FFFFFF",
-              "padding": [
-                0,
-                120
-              ],
-              "justifyContent": "space_between",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "quJNK",
-                  "name": "Logo",
-                  "fill": "#0B0F1A",
-                  "content": "SHAKER.DEV",
-                  "fontFamily": "Space Mono",
-                  "fontSize": 18,
-                  "fontWeight": "bold",
-                  "letterSpacing": 2
-                },
-                {
-                  "type": "frame",
-                  "id": "rA5Os",
-                  "name": "Nav",
-                  "fill": "#00000000",
-                  "gap": 40,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "JyM3Z",
-                      "fill": "#4A5568",
-                      "content": "О нас",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "ibht3",
-                      "fill": "#4A5568",
-                      "content": "Компетенции",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "L57nP",
-                      "fill": "#4A5568",
-                      "content": "Кейсы",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "1wWMQ",
-                      "fill": "#4A5568",
-                      "content": "Контакты",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "i5UT8",
-                  "name": "Actions",
-                  "fill": "#00000000",
-                  "gap": 16,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "9RnOL",
-                      "name": "ThemeToggle",
-                      "width": 52,
-                      "height": 28,
-                      "fill": "#E2E8F0",
-                      "cornerRadius": 14,
-                      "padding": 3,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "ellipse",
-                          "id": "RmYia",
-                          "name": "Knob",
-                          "fill": "#0B0F1A",
-                          "width": 22,
-                          "height": 22
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "jVl03",
-                      "name": "CTA",
-                      "fill": "#0B0F1A",
-                      "cornerRadius": 6,
-                      "padding": [
-                        10,
-                        24
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "rdT9g",
-                          "fill": "#FFFFFF",
-                          "content": "Обсудить проект",
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "UFY12",
-              "name": "lightHero",
-              "width": "fill_container",
-              "height": 700,
-              "fill": "#F4F6FA",
-              "padding": [
-                0,
-                80
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "3Zh04",
-                  "name": "HeroLeft",
-                  "width": 620,
-                  "height": "fill_container",
-                  "fill": "#00000000",
-                  "layout": "vertical",
-                  "gap": 32,
-                  "justifyContent": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "uuuwT",
-                      "name": "Badge",
-                      "fill": "#00000000",
-                      "cornerRadius": 4,
-                      "gap": 8,
-                      "padding": [
-                        6,
-                        14
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "rectangle",
-                          "cornerRadius": 3,
-                          "id": "CAJQv",
-                          "fill": "#66B22E",
-                          "width": 6,
-                          "height": 6
-                        },
-                        {
-                          "type": "text",
-                          "id": "d2tWW",
-                          "fill": "#66B22E",
-                          "content": "10 лет опыта · Экспорт в 20 стран",
-                          "fontFamily": "Space Mono",
-                          "fontSize": 12,
-                          "fontWeight": "normal",
-                          "letterSpacing": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "70ysW",
-                      "name": "H1",
-                      "fill": "#0B0F1A",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "Создаём умные устройства, которые продаются по всему миру",
-                      "lineHeight": 1.15,
-                      "fontFamily": "Inter",
-                      "fontSize": 52,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "NO7Yj",
-                      "name": "Sub",
-                      "fill": "#4A5568",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "Команда с 10-летним опытом. Сами разработали продукт и экспортируем в 20 стран. Поможем вам пройти путь от идеи до серии — быстро, бережливо, без подводных камней.",
-                      "lineHeight": 1.6,
-                      "fontFamily": "Inter",
-                      "fontSize": 17,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "SoCli",
-                      "name": "CTAs",
-                      "fill": "#00000000",
-                      "gap": 16,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "3mpDY",
-                          "name": "PrimaryBtn",
-                          "fill": "#66B22E",
-                          "cornerRadius": 6,
-                          "padding": [
-                            14,
-                            28
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "VH4rR",
-                              "fill": "#FFFFFF",
-                              "content": "Обсудить проект",
-                              "fontFamily": "Inter",
-                              "fontSize": 15,
-                              "fontWeight": "600"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "fRuI2",
-                          "name": "SecondaryBtn",
-                          "fill": "#00000000",
-                          "cornerRadius": 6,
-                          "padding": [
-                            14,
-                            28
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "Gu4HH",
-                              "fill": "#4A5568",
-                              "content": "Кейсы →",
-                              "fontFamily": "Inter",
-                              "fontSize": 15,
-                              "fontWeight": "normal"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "dz0p3",
-                  "name": "HeroRight",
-                  "width": "fill_container",
-                  "height": "fill_container",
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./images/generated-1772872474036.png",
-                    "mode": "fill"
-                  },
-                  "layout": "vertical",
-                  "justifyContent": "center",
-                  "alignItems": "center"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

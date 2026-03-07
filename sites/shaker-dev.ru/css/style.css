@@ -233,12 +233,27 @@ button {
 }
 
 .header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: 'Space Mono', monospace;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--text);
   flex-shrink: 0;
+  text-decoration: none;
+}
+
+.header__logo-icon {
+  width: 40px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+}
+
+.header__logo-text {
+  color: inherit;
 }
 
 .header__nav {
@@ -1246,12 +1261,22 @@ button {
 }
 
 .footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: 'Space Mono', monospace;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--text);
   flex-shrink: 0;
+}
+
+.footer__logo-icon {
+  width: 28px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer__nav {
@@ -1315,6 +1340,12 @@ button {
   .header__logo {
     font-size: 14px;
     letter-spacing: 1px;
+    gap: 10px;
+  }
+
+  .header__logo-icon {
+    width: 28px;
+    height: 25px;
   }
 
   .header__nav {
