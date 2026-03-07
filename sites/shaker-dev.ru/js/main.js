@@ -1,175 +1,225 @@
-/* ============================================================
-   THEME
-   ============================================================ */
-const THEME_KEY = 'theme';
-const root = document.documentElement;
+(function () {
+  'use strict';
 
-function applyTheme(theme) {
-  root.setAttribute('data-theme', theme);
-  localStorage.setItem(THEME_KEY, theme);
-  document.querySelectorAll('.mobile-menu__theme-btn').forEach(function (btn) {
-    btn.classList.toggle('is-active', btn.dataset.theme === theme);
-  });
-}
+  /* ----------------------------------------------------------------
+     Theme
+  ---------------------------------------------------------------- */
+  var html = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
 
-var themeToggle = document.getElementById('themeToggle');
-if (themeToggle) {
-  themeToggle.addEventListener('click', function () {
-    var current = root.getAttribute('data-theme');
-    applyTheme(current === 'dark' ? 'light' : 'dark');
-  });
-}
-
-document.querySelectorAll('.mobile-menu__theme-btn').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    applyTheme(btn.dataset.theme);
-  });
-});
-
-applyTheme(root.getAttribute('data-theme'));
-
-/* ============================================================
-   HEADER — scrolled state
-   ============================================================ */
-var header = document.getElementById('header');
-var heroSection = document.getElementById('hero');
-
-if (header && heroSection) {
-  var headerObserver = new IntersectionObserver(
-    function (entries) {
-      header.classList.toggle('is-scrolled', !entries[0].isIntersecting);
-    },
-    { threshold: 0, rootMargin: '-' + (header.offsetHeight + 1) + 'px 0px 0px 0px' }
-  );
-  headerObserver.observe(heroSection);
-}
-
-/* ============================================================
-   MOBILE MENU — iOS scroll lock
-   ============================================================ */
-var mobileMenu = document.getElementById('mobileMenu');
-var burger = document.getElementById('burger');
-var menuClose = document.getElementById('menuClose');
-var menuLinks = document.querySelectorAll('.mobile-menu__link');
-
-function openMenu() {
-  var scrollY = window.scrollY;
-  document.body.style.top = '-' + scrollY + 'px';
-  document.body.classList.add('menu-open');
-  mobileMenu.classList.add('is-open');
-  mobileMenu.setAttribute('aria-hidden', 'false');
-}
-
-function closeMenu() {
-  var scrollY = parseInt(document.body.style.top || '0', 10);
-  document.body.classList.remove('menu-open');
-  document.body.style.top = '';
-  mobileMenu.classList.remove('is-open');
-  mobileMenu.setAttribute('aria-hidden', 'true');
-  if (scrollY) {
-    window.scrollTo(0, -scrollY);
+  function getInitialTheme() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') return stored;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
+    return 'dark';
   }
-}
 
-if (burger) burger.addEventListener('click', openMenu);
-if (menuClose) menuClose.addEventListener('click', closeMenu);
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
 
-menuLinks.forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    var href = link.getAttribute('href');
-    if (href && href.indexOf('#') === 0) {
-      e.preventDefault();
-      closeMenu();
-      setTimeout(function () {
-        var target = document.querySelector(href);
-        if (target) {
-          var top = target.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-        }
-      }, 320);
+  applyTheme(getInitialTheme());
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var current = html.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  /* ----------------------------------------------------------------
+     Header scroll state
+  ---------------------------------------------------------------- */
+  var header = document.getElementById('header');
+
+  function onScroll() {
+    if (!header) return;
+    if (window.pageYOffset > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
-  });
-});
+  }
 
-mobileMenu.addEventListener('click', function (e) {
-  if (e.target === mobileMenu) closeMenu();
-});
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-/* ============================================================
-   SCROLL REVEAL — IntersectionObserver
-   ============================================================ */
-var revealObserver = new IntersectionObserver(
-  function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
+  /* ----------------------------------------------------------------
+     Mobile menu
+  ---------------------------------------------------------------- */
+  var burger = document.getElementById('burger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('.mobile-menu__link, .mobile-menu__cta') : [];
+  var scrollY = 0;
+
+  function openMenu() {
+    scrollY = window.pageYOffset;
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + scrollY + 'px';
+    document.body.style.width = '100%';
+    burger.classList.add('active');
+    burger.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeMenu() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollY);
+    burger.classList.remove('active');
+    burger.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  }
+
+  if (burger && mobileMenu) {
+    burger.addEventListener('click', function () {
+      if (mobileMenu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
       }
     });
-  },
-  { threshold: 0.12 }
-);
 
-document.querySelectorAll('.scroll-reveal').forEach(function (el) {
-  revealObserver.observe(el);
-});
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
 
-/* ============================================================
-   SMOOTH SCROLL — anchor links
-   ============================================================ */
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-  if (link.classList.contains('mobile-menu__link')) return;
-  link.addEventListener('click', function (e) {
-    var href = link.getAttribute('href');
-    if (href === '#') {
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------------
+     Scroll-triggered fade-in (IntersectionObserver)
+  ---------------------------------------------------------------- */
+  var fadeEls = document.querySelectorAll('.fade-in');
+
+  if ('IntersectionObserver' in window && fadeEls.length) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    fadeEls.forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }
+
+  /* ----------------------------------------------------------------
+     Hero parallax on scroll
+  ---------------------------------------------------------------- */
+  var heroRight = document.getElementById('heroRight');
+
+  function onHeroParallax() {
+    if (!heroRight) return;
+    var sy = window.pageYOffset;
+    var translateY = sy * 0.12;
+    heroRight.style.WebkitTransform = 'translateY(' + translateY + 'px)';
+    heroRight.style.transform = 'translateY(' + translateY + 'px)';
+  }
+
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    window.addEventListener('scroll', onHeroParallax, { passive: true });
+  }
+
+  /* ----------------------------------------------------------------
+     Smooth scroll for anchor links
+  ---------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-    var target = document.querySelector(href);
-    if (!target) return;
-    e.preventDefault();
-    var top = target.getBoundingClientRect().top + window.scrollY - (header ? header.offsetHeight : 0) - 8;
-    window.scrollTo({ top: top, behavior: 'smooth' });
+      var headerH = header ? header.offsetHeight : 72;
+      var targetY = target.getBoundingClientRect().top + window.pageYOffset - headerH;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    });
   });
-});
 
-/* ============================================================
-   CONTACT FORM — UX states (no backend yet)
-   ============================================================ */
-var contactForm = document.getElementById('contactForm');
-var formStatus = document.getElementById('formStatus');
+  /* ----------------------------------------------------------------
+     Contact form
+  ---------------------------------------------------------------- */
+  var form = document.getElementById('contactForm');
+  var formSubmit = document.getElementById('formSubmit');
+  var formStatus = document.getElementById('formStatus');
 
-if (contactForm && formStatus) {
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var submitBtn = contactForm.querySelector('.contacts__submit');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Отправляем…';
-    formStatus.textContent = '';
-    formStatus.className = 'contacts__form-status';
+  /* Replace with actual Google Apps Script endpoint */
+  var FORM_ENDPOINT = '';
 
-    setTimeout(function () {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Отправить заявку';
-      formStatus.textContent = 'Заявка принята, свяжемся с вами';
-      formStatus.className = 'contacts__form-status success';
-      contactForm.reset();
-    }, 800);
-  });
-}
+  function setFormStatus(type, msg) {
+    if (!formStatus) return;
+    formStatus.textContent = msg;
+    formStatus.className = 'form__status ' + type;
+  }
 
-/* ============================================================
-   HERO PARALLAX — subtle (optional)
-   ============================================================ */
-var heroVisual = document.querySelector('.hero__visual');
-if (heroVisual && window.matchMedia('(min-width: 769px)').matches) {
-  window.addEventListener('scroll', function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var rect = heroVisual.getBoundingClientRect();
-    var rate = 0.15;
-    var y = (window.innerHeight - rect.top) * rate;
-    heroVisual.style.transform = 'translateY(' + y + 'px)';
-    heroVisual.style.webkitTransform = 'translateY(' + y + 'px)';
-  }, { passive: true });
-}
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var name = form.querySelector('#name').value.trim();
+      var phone = form.querySelector('#phone').value.trim();
+      var idea = form.querySelector('#idea').value.trim();
+
+      if (!name || !phone || !idea) {
+        setFormStatus('error', 'Пожалуйста, заполните все поля.');
+        return;
+      }
+
+      if (formSubmit) {
+        formSubmit.disabled = true;
+        formSubmit.textContent = 'Отправляем…';
+      }
+      setFormStatus('', '');
+
+      var data = { name: name, phone: phone, idea: idea };
+
+      if (FORM_ENDPOINT) {
+        fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+          .then(function () {
+            setFormStatus('success', 'Заявка принята, свяжемся с вами!');
+            form.reset();
+          })
+          .catch(function () {
+            setFormStatus('error', 'Ошибка, попробуйте ещё раз.');
+          })
+          .finally(function () {
+            if (formSubmit) {
+              formSubmit.disabled = false;
+              formSubmit.textContent = 'Отправить заявку';
+            }
+          });
+      } else {
+        /* Demo mode without backend */
+        setTimeout(function () {
+          setFormStatus('success', 'Заявка принята, свяжемся с вами!');
+          form.reset();
+          if (formSubmit) {
+            formSubmit.disabled = false;
+            formSubmit.textContent = 'Отправить заявку';
+          }
+        }, 1200);
+      }
+    });
+  }
+
+})();
