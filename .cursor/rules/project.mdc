@@ -1,0 +1,88 @@
+---
+description: Core rules and lessons learned for static personal site projects (HTML/CSS/JS, reg.ru hosting)
+globs:
+  - "**/*.html"
+  - "**/*.css"
+  - "**/*.js"
+alwaysApply: true
+---
+
+# Project Rules
+
+## Stack
+
+- Pure HTML + CSS + JS, no frameworks, no build step
+- Fonts: `Inter` (body) + `Space Mono` (mono/accent) from Google Fonts
+- Deploy via SFTP to reg.ru hosting (see `.cursor/skills/deploy-nefedov-tech/`)
+
+## CSS Conventions
+
+- Mobile-first responsive: breakpoint at `max-width: 768px`
+- Stats block: desktop uses flexbox, mobile uses `grid-template-columns: 1fr 1fr` (2×2 grid)
+- Animations: always add `-webkit-` prefixes (`-webkit-transform`, `-webkit-animation`, `@-webkit-keyframes`)
+
+## Cross-browser Compatibility (Safari / iOS)
+
+These are known pitfalls — always apply them proactively:
+
+1. **SVG size** — All `<img src="*.svg">` and inline SVGs must have explicit `width` and `height` attributes. Safari renders SVGs without dimensions at 300×150px.
+
+2. **`inset: 0` not supported** in Safari < 14.1 — use explicit `top: 0; right: 0; bottom: 0; left: 0` instead.
+
+3. **`color-mix()`** not supported in Safari < 16.2 — always pair with `rgba()` fallback:
+   ```css
+   background: rgba(0, 0, 0, 0.1); /* fallback */
+   background: color-mix(in srgb, var(--color) 10%, transparent);
+   ```
+   Or wrap in `@supports (color: color-mix(in srgb, red 10%, blue))`.
+
+4. **iOS scroll lock** — `overflow: hidden` on `<body>` does NOT prevent scroll on iOS Safari.
+   Fix: use `position: fixed; top: -${scrollY}px; width: 100%` on body when locking, restore scroll position on unlock.
+
+5. **Mobile menu height** — use `height: 100dvh` with `100vh` fallback:
+   ```css
+   height: 100vh;
+   height: 100dvh;
+   ```
+
+6. **`-webkit-` animation prefixes** — always add to all keyframe animations and transitions.
+
+## JS Conventions
+
+- `splitHeroName()` in `main.js`: wraps each word of the hero name in `display:inline-block; white-space:nowrap` spans. This ensures line breaks happen **between words**, not mid-word on mobile. Do not change span structure without verifying mobile word-break.
+
+## Deploy
+
+All deploy tooling lives in `.cursor/skills/deploy-nefedov-tech/`:
+- `deploy.py` — SFTP upload script (requires `paramiko`)
+- `deploy.env` — credentials (never commit this file; add to `.gitignore`)
+
+Quick deploy:
+```bash
+python .cursor/skills/deploy-nefedov-tech/deploy.py
+```
+
+For a **new project**: update `deploy.env` with new HOST, USER, PASS, REMOTE_DIR.
+Update `DEPLOY_FILES` and `DEPLOY_DIRS` lists in `deploy.py` to match the new project structure.
+
+## Cross-browser Testing (Playwright)
+
+```bash
+pip install playwright
+python -m playwright install chromium firefox webkit
+```
+
+Test script:
+```python
+from playwright.sync_api import sync_playwright
+import time
+with sync_playwright() as p:
+    for eng in ['chromium', 'webkit', 'firefox']:
+        br = getattr(p, eng).launch()
+        pg = br.new_page(viewport={'width': 390, 'height': 844})
+        pg.goto('https://YOUR-SITE.com/', wait_until='networkidle', timeout=60000)
+        time.sleep(1)
+        pg.screenshot(path=eng + '_check.png')
+        br.close()
+        print(eng + ' OK')
+```

@@ -1,0 +1,20 @@
+# Credentials — never commit
+.cursor/skills/deploy-nefedov-tech/deploy.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo

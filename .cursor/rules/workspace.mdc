@@ -1,0 +1,46 @@
+---
+description: Organization of the landings workspace — where to put sites, makets, and shared config
+globs: []
+alwaysApply: true
+---
+
+# Workspace: репозиторий лендингов
+
+Репозиторий содержит **общие правила и скрипты** в `.cursor/` и **отдельные сайты** в `sites/`.
+
+## Структура
+
+```
+.cursor/                    # Общее для всех проектов (копировать в новый репо)
+  rules/                    # Правила Cursor
+    project.mdc             # Стек, CSS/JS, кросс-браузерность
+    workspace.mdc           # Этот файл — организация рабочего пространства
+  skills/
+    deploy-nefedov-tech/    # Деплой по SFTP (reg.ru)
+      deploy.py
+      deploy.env
+      deploy.env.example
+      SKILL.md
+
+sites/                      # Папки с сайтами
+  <имя-сайта>/              # Один лендинг = одна папка (домен или slug)
+    maket/                  # Макет: .pen, экспорты из Figma, референсы
+    index.html              # Реализация: HTML, CSS, JS, ассеты
+    css/
+    js/
+    ...
+```
+
+## Правила
+
+1. **Один сайт — одна папка** в `sites/<имя>/`. Имя — домен без точки (например `nefedov.tech`) или короткий slug.
+
+2. **В папке сайта обязательно:**
+   - `maket/` — макеты и дизайн-файлы (Pen, Figma export, скриншоты). В деплой не попадают.
+   - Корень папки — **реализация**: `index.html`, `css/`, `js/`, изображения, favicon, manifest. Всё это заливается на хостинг.
+
+3. **Общие вещи** не класть в папку сайта: скрипты деплоя, правила Cursor — только в `.cursor/`.
+
+4. **Новый сайт:** создать `sites/<новый-сайт>/maket/` и файлы реализации в `sites/<новый-сайт>/`. В `.cursor/skills/deploy-nefedov-tech/deploy.env` задать `LOCAL_SITE=sites/<новый-сайт>`, `REMOTE_DIR=...`, `SITE_URL=...`. При необходимости поправить списки `DEPLOY_FILES` и `DEPLOY_DIRS` в `deploy.py`.
+
+5. **Деплой** всегда идёт из папки сайта, указанной в `LOCAL_SITE`; `SITE_URL` из `.env` используется в сообщениях и проверках.

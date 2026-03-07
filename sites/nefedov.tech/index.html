@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleksandr Nefedov — Fullstack Team Lead / AI Engineer</title>
+  <!-- Open Graph / Telegram preview -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://nefedov.tech/">
+  <meta property="og:title"       content="Aleksandr Nefedov — Fullstack Team Lead / AI Engineer">
+  <meta property="og:description" content="Senior Frontend с 5 годами опыта. Team Lead команды до 8 человек. Внедряю AI-агентные системы в процессы разработки — ускорение в 3–4 раза.">
+  <meta property="og:image"       content="https://nefedov.tech/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Aleksandr Nefedov — Fullstack Team Lead / AI Engineer">
+  <meta name="twitter:description" content="Senior Frontend с 5 годами опыта. Team Lead команды до 8 человек. Внедряю AI-агентные системы в процессы разработки — ускорение в 3–4 раза.">
+  <meta name="twitter:image"       content="https://nefedov.tech/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1.1.0">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Prevent FOUC: restore theme and accent before first paint -->
+  <script>
+    (function () {
+      var storedTheme = localStorage.getItem('nefedov-theme');
+      var preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', storedTheme || preferred);
+
+      var storedAccent = localStorage.getItem('nefedov-accent');
+      if (storedAccent) {
+        document.documentElement.style.setProperty('--accent', storedAccent);
+      }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo" aria-label="На главную">
+      <div class="nav__logo-box">AN</div>
+      <span class="nav__logo-label">NEFEDOV.TECH</span>
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="#about" class="nav__link">О СЕБЕ</a></li>
+      <li><a href="#experience" class="nav__link">ОПЫТ</a></li>
+      <li><a href="#skills" class="nav__link">СТЕК</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <!-- Theme toggle: sun | divider | moon -->
+      <button class="theme-btn" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-btn__icon theme-btn__sun" id="sunIcon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+        </span>
+        <span class="theme-btn__div"></span>
+        <span class="theme-btn__icon theme-btn__moon" id="moonIcon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </span>
+      </button>
+
+      <!-- Accent color palette -->
+      <div class="accent-palette" id="accentPalette" aria-label="Выбрать акцентный цвет">
+        <button class="accent-dot" data-color="#FF0000" style="background:#FF0000" aria-label="Красный"></button>
+        <button class="accent-dot" data-color="#2563EB" style="background:#2563EB" aria-label="Синий"></button>
+        <button class="accent-dot" data-color="#22C55E" style="background:#22C55E" aria-label="Зелёный"></button>
+        <button class="accent-dot" data-color="#F97316" style="background:#F97316" aria-label="Оранжевый"></button>
+        <button class="accent-dot" data-color="#8B5CF6" style="background:#8B5CF6" aria-label="Фиолетовый"></button>
+        <button class="accent-dot" data-color="#06B6D4" style="background:#06B6D4" aria-label="Циан"></button>
+      </div>
+
+      <a href="#cta" class="nav__cta">СВЯЗАТЬСЯ</a>
+    </div>
+
+    <!-- Hamburger — mobile only -->
+    <button class="nav__burger" id="navBurger" aria-label="Открыть меню">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- ========== MOBILE MENU OVERLAY ========== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <!-- Mobile nav bar -->
+    <div class="mobile-menu__nav">
+      <div class="mobile-menu__logo">
+        <div class="mobile-menu__logo-box">AN</div>
+        <span class="mobile-menu__logo-label">NEFEDOV.TECH</span>
+      </div>
+      <button class="mobile-menu__close" id="menuClose" aria-label="Закрыть меню">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu panel -->
+    <div class="mobile-menu__panel">
+      <!-- Nav links -->
+      <nav class="mobile-menu__links" aria-label="Навигация">
+        <a href="#about" class="mobile-menu__link">
+          О СЕБЕ
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        <div class="mobile-menu__sep"></div>
+        <a href="#experience" class="mobile-menu__link">
+          ОПЫТ
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        <div class="mobile-menu__sep"></div>
+        <a href="#skills" class="mobile-menu__link">
+          СТЕК
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        <div class="mobile-menu__sep"></div>
+        <a href="#cta" class="mobile-menu__link">
+          КОНТАКТЫ
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </nav>
+
+      <!-- Bottom section -->
+      <div class="mobile-menu__bottom">
+        <div class="mobile-menu__bottom-sep"></div>
+
+        <!-- Theme -->
+        <div>
+          <div class="mobile-menu__section-label" style="margin-bottom:12px">ТЕМА</div>
+          <div class="mobile-theme-btns">
+            <button class="mobile-theme-btn" data-theme="light" id="mobileBtnLight">СВЕТЛАЯ</button>
+            <button class="mobile-theme-btn" data-theme="dark" id="mobileBtnDark">ТЁМНАЯ</button>
+          </div>
+        </div>
+
+        <!-- Accent -->
+        <div>
+          <div class="mobile-menu__section-label" style="margin-bottom:12px">АКЦЕНТ</div>
+          <div class="mobile-accent-palette" id="mobileAccentPalette">
+            <button class="accent-dot" data-color="#FF0000" style="background:#FF0000;width:16px;height:16px" aria-label="Красный"></button>
+            <button class="accent-dot" data-color="#2563EB" style="background:#2563EB;width:16px;height:16px" aria-label="Синий"></button>
+            <button class="accent-dot" data-color="#22C55E" style="background:#22C55E;width:16px;height:16px" aria-label="Зелёный"></button>
+            <button class="accent-dot" data-color="#F97316" style="background:#F97316;width:16px;height:16px" aria-label="Оранжевый"></button>
+            <button class="accent-dot" data-color="#8B5CF6" style="background:#8B5CF6;width:16px;height:16px" aria-label="Фиолетовый"></button>
+            <button class="accent-dot" data-color="#06B6D4" style="background:#06B6D4;width:16px;height:16px" aria-label="Циан"></button>
+          </div>
+        </div>
+
+        <!-- Telegram CTA -->
+        <a href="https://t.me/asnefedov" target="_blank" rel="noopener noreferrer" class="mobile-menu__cta">
+          НАПИСАТЬ В TELEGRAM
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__top reveal-item">
+      <span class="hero__status-dot"></span>
+      <span class="hero__status-text">AVAILABLE FOR HIRE</span>
+      <div class="hero__divider-line"></div>
+      <span class="hero__location">MOSCOW / REMOTE</span>
+    </div>
+
+    <h1 class="hero__name">ALEKSANDR NEFEDOV</h1>
+
+    <p class="hero__title reveal-item delay-2">FULLSTACK TEAM LEAD / AI ENGINEER</p>
+
+    <p class="hero__desc reveal-item delay-3">
+      Senior Frontend с 5 годами опыта в продуктовой разработке. Team Lead команды до 8 человек.
+      Внедряю AI-агентные системы в процессы разработки — ускорение команды в 3–4 раза при сохранении качества.
+      Этот сайт — макет, код, деплой — собран с AI.
+    </p>
+
+    <div class="hero__stats reveal-item delay-4">
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-count="5" data-suffix="+">5+</span>
+        <span class="hero__stat-label">ЛЕТ ОПЫТА</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-count="8">8</span>
+        <span class="hero__stat-label">ЧЕЛОВЕК В КОМАНДЕ</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-count="99" data-prefix="~">~99</span>
+        <span class="hero__stat-label">% UPTIME PRODUCTION</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-num" data-static="3-4x">3-4x</span>
+        <span class="hero__stat-label">УСКОРЕНИЕ КОМАНДЫ AI</span>
+      </div>
+    </div>
+
+    <div class="hero__btns reveal-item delay-5">
+      <a href="#cta" class="btn btn--red">СВЯЗАТЬСЯ / CONTACT</a>
+      <a href="resume.pdf" download="Нефедов Александр Сергеевич.pdf" class="btn btn--outline" id="resumeBtn">СКАЧАТЬ РЕЗЮМЕ</a>
+      <div class="hero__sep"></div>
+      <a href="mailto:nefedovaleksandr196@gmail.com" class="hero__email">nefedovaleksandr196@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- ========== DIVIDER BAND ========== -->
+  <div class="divider-band" aria-hidden="true">
+    <div class="divider-band__track">
+      <span>REACT</span>
+      <span class="divider-band__sep">◆</span>
+      <span>TYPESCRIPT</span>
+      <span class="divider-band__sep">◆</span>
+      <span>JAVASCRIPT</span>
+      <span class="divider-band__sep">◆</span>
+      <span>REDUX TOOLKIT</span>
+      <span class="divider-band__sep">◆</span>
+      <span>VITE</span>
+      <span class="divider-band__sep">◆</span>
+      <span>ELECTRON</span>
+      <span class="divider-band__sep">◆</span>
+      <span>REACT NATIVE</span>
+      <span class="divider-band__sep">◆</span>
+      <span>FIGMA</span>
+      <span class="divider-band__sep">◆</span>
+      <span>DESIGN SYSTEM</span>
+      <span class="divider-band__sep">◆</span>
+      <span>REST API</span>
+      <span class="divider-band__sep">◆</span>
+      <span>DOCKER</span>
+      <span class="divider-band__sep">◆</span>
+      <span>JAVA</span>
+      <span class="divider-band__sep">◆</span>
+      <span>GO</span>
+      <span class="divider-band__sep">◆</span>
+      <span>POSTGRESQL</span>
+      <span class="divider-band__sep">◆</span>
+      <span>TEAM LEAD</span>
+      <span class="divider-band__sep">◆</span>
+      <span>CODE REVIEW</span>
+      <span class="divider-band__sep">◆</span>
+      <span>CURSOR</span>
+      <span class="divider-band__sep">◆</span>
+      <span>AI TEAMS</span>
+      <span class="divider-band__sep">◆</span>
+      <span>MCP</span>
+      <span class="divider-band__sep">◆</span>
+      <!-- duplicate for seamless loop -->
+      <span>REACT</span>
+      <span class="divider-band__sep">◆</span>
+      <span>TYPESCRIPT</span>
+      <span class="divider-band__sep">◆</span>
+      <span>JAVASCRIPT</span>
+      <span class="divider-band__sep">◆</span>
+      <span>REDUX TOOLKIT</span>
+      <span class="divider-band__sep">◆</span>
+      <span>VITE</span>
+      <span class="divider-band__sep">◆</span>
+      <span>ELECTRON</span>
+      <span class="divider-band__sep">◆</span>
+      <span>REACT NATIVE</span>
+      <span class="divider-band__sep">◆</span>
+      <span>FIGMA</span>
+      <span class="divider-band__sep">◆</span>
+      <span>DESIGN SYSTEM</span>
+      <span class="divider-band__sep">◆</span>
+      <span>REST API</span>
+      <span class="divider-band__sep">◆</span>
+      <span>DOCKER</span>
+      <span class="divider-band__sep">◆</span>
+      <span>JAVA</span>
+      <span class="divider-band__sep">◆</span>
+      <span>GO</span>
+      <span class="divider-band__sep">◆</span>
+      <span>POSTGRESQL</span>
+      <span class="divider-band__sep">◆</span>
+      <span>TEAM LEAD</span>
+      <span class="divider-band__sep">◆</span>
+      <span>CODE REVIEW</span>
+      <span class="divider-band__sep">◆</span>
+      <span>CURSOR</span>
+      <span class="divider-band__sep">◆</span>
+      <span>AI TEAMS</span>
+      <span class="divider-band__sep">◆</span>
+      <span>MCP</span>
+      <span class="divider-band__sep">◆</span>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="about__left scroll-reveal">
+      <div class="about__photo">
+        <img src="photo.png" alt="Александр Нефедов" loading="lazy">
+      </div>
+      <span class="section-tag">01 / О СЕБЕ</span>
+      <h2 class="about__headline">Строю AI-first команды</h2>
+    </div>
+    <div class="about__right scroll-reveal delay-1">
+      <p class="about__desc">
+        Выстраиваю инженерные процессы с AI: от постановки задачи до production-релиза.
+        Внедрил агентные системы в команде — скорость разработки выросла в 3–4 раза при сохранении качества кода.
+        Этот сайт — макет, код, деплой — собран с AI.
+      </p>
+      <p class="about__desc">
+        Проектирую архитектуру и развёртываю продукт целиком — от схемы БД до фронта.
+        Веду команду до 8 человек: планирование, code review, DoD, онбординг.
+        Опыт с новыми продуктами и legacy.
+      </p>
+      <div class="about__tags">
+        <span class="tag">AI Engineering</span>
+        <span class="tag">Team Lead</span>
+        <span class="tag">Architecture</span>
+        <span class="tag">Mentoring</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section class="experience" id="experience">
+    <div class="experience__header scroll-reveal">
+      <span class="section-tag">02 / ОПЫТ РАБОТЫ</span>
+      <span class="experience__years">2021 — НАСТОЯЩЕЕ ВРЕМЯ</span>
+    </div>
+
+    <div class="exp-grid">
+
+      <!-- Job 1: SHAKER -->
+      <div class="exp-item scroll-reveal">
+        <div class="exp-item__left">
+          <span class="exp-item__period exp-item__period--active">2023 — НАСТОЯЩЕЕ</span>
+          <h3 class="exp-item__company">SHAKER</h3>
+          <span class="exp-item__role">Team Lead Fullstack</span>
+          <div class="exp-item__stages">
+            <span class="exp-item__stage">06.2023 — 06.2024 / Senior Frontend</span>
+            <span class="exp-item__stage">06.2024 — 03.2025 / Senior Fullstack</span>
+            <span class="exp-item__stage exp-item__stage--active">03.2025 — наст. / Team Lead Fullstack</span>
+          </div>
+        </div>
+        <div class="exp-item__right">
+          <p class="exp-item__desc">
+            Веб-приложение (SPA) для контроля вендинговых автоматов; система телеметрии (мониторинг, микросервисы);
+            десктоп-приложение для автомата (Electron); R&amp;D (мобильное направление). Команда до 8 человек.
+          </p>
+          <div class="exp-item__wins">
+            <span class="exp-item__wins-label">КЛЮЧЕВЫЕ ДОСТИЖЕНИЯ</span>
+            <div class="exp-item__win">
+              <span class="exp-item__win-dot"></span>
+              <span>Дизайн-система (fork Consta UI) с темизацией light/dark — ускорение поставки фич</span>
+            </div>
+            <div class="exp-item__win">
+              <span class="exp-item__win-dot"></span>
+              <span>Electron десктоп-приложение для автомата — IPC архитектура и модель подписок</span>
+            </div>
+            <div class="exp-item__win">
+              <span class="exp-item__win-dot"></span>
+              <span>AI-агенты (Cursor, MCP, RAG) — ускорение разработки в 3-4х при сохранении качества</span>
+            </div>
+            <div class="exp-item__win">
+              <span class="exp-item__win-dot"></span>
+              <span>Uptime ~99%, релиз 2 недели, выкладка 10-15 мин — налаженный production</span>
+            </div>
+          </div>
+          <div class="exp-item__stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">TypeScript</span>
+            <span class="stack-tag">Electron</span>
+            <span class="stack-tag">Java / Go</span>
+            <span class="stack-tag">Kafka</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 2: NAUMEN -->
+      <div class="exp-item scroll-reveal delay-1">
+        <div class="exp-item__left">
+          <span class="exp-item__period">2022 — 2023</span>
+          <h3 class="exp-item__company">NAUMEN</h3>
+          <span class="exp-item__role">Frontend Developer</span>
+        </div>
+        <div class="exp-item__right">
+          <p class="exp-item__desc">
+            No-code платформа (госгрант), разработка с нуля; enterprise-вендор.
+            Миграция с Redux на Redux Toolkit, разработка сложных форм и UI-сценариев.
+            Доработка UI-kit на базе Consta UI.
+          </p>
+          <div class="exp-item__stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Redux Toolkit</span>
+            <span class="stack-tag">Consta UI</span>
+            <span class="stack-tag">Webpack</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 3: СИМА-ЛЕНД -->
+      <div class="exp-item scroll-reveal delay-2">
+        <div class="exp-item__left">
+          <span class="exp-item__period">2021 — 2022</span>
+          <h3 class="exp-item__company">СИМА-ЛЕНД</h3>
+          <span class="exp-item__role">Junior Fullstack</span>
+        </div>
+        <div class="exp-item__right">
+          <p class="exp-item__desc">
+            Внутренняя ERP-система: справочники, контрагенты, документооборот;
+            полный цикл от постановки до поддержки. CRUD-модули, формы, фильтры,
+            права доступа, REST API.
+          </p>
+          <div class="exp-item__stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">NestJS</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">TypeORM</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="skills" id="skills">
+    <div class="skills__header scroll-reveal">
+      <span class="section-tag">03 / СТЕК ТЕХНОЛОГИЙ</span>
+      <span class="skills__header-right">FRONTEND + FULLSTACK + INFRA</span>
+    </div>
+
+    <div class="skills__grid">
+
+      <!-- Col 1: Frontend -->
+      <div class="skills__col scroll-reveal">
+        <div class="skills__col-hdr skills__col-hdr--featured">FRONTEND</div>
+        <div class="skills__items">
+          <div class="skill-item">
+            <span class="skill-item__name">React</span>
+            <span class="skill-item__level skill-item__level--red">EXPERT</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">TypeScript</span>
+            <span class="skill-item__level skill-item__level--red">EXPERT</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">Redux Toolkit</span>
+            <span class="skill-item__level skill-item__level--red">ADVANCED</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">Electron</span>
+            <span class="skill-item__level skill-item__level--red">ADVANCED</span>
+          </div>
+          <div class="skill-item skill-item--last">
+            <span class="skill-item__name">Vite / Webpack</span>
+            <span class="skill-item__level skill-item__level--red">ADVANCED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2: Backend/Infra -->
+      <div class="skills__col scroll-reveal delay-1">
+        <div class="skills__col-hdr">BACKEND / INFRA</div>
+        <div class="skills__items">
+          <div class="skill-item">
+            <span class="skill-item__name">Java (Spring Boot)</span>
+            <span class="skill-item__level">MIDDLE</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">Go</span>
+            <span class="skill-item__level">MIDDLE</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">PostgreSQL</span>
+            <span class="skill-item__level">ADVANCED</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">Kafka</span>
+            <span class="skill-item__level">ADVANCED</span>
+          </div>
+          <div class="skill-item skill-item--last">
+            <span class="skill-item__name">Docker / Nginx</span>
+            <span class="skill-item__level">ADVANCED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 3: Leadership/AI -->
+      <div class="skills__col scroll-reveal delay-2">
+        <div class="skills__col-hdr">LEADERSHIP / AI</div>
+        <div class="skills__items">
+          <div class="skill-item">
+            <span class="skill-item__name">Team Lead (8 чел.)</span>
+            <span class="skill-item__level skill-item__level--red">ACTIVE</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">Cursor + MCP</span>
+            <span class="skill-item__level skill-item__level--red">EXPERT</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">RAG / LLM</span>
+            <span class="skill-item__level skill-item__level--red">ADVANCED</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-item__name">Code Review</span>
+            <span class="skill-item__level skill-item__level--red">EXPERT</span>
+          </div>
+          <div class="skill-item skill-item--last">
+            <span class="skill-item__name">Менторинг</span>
+            <span class="skill-item__level skill-item__level--red">ACTIVE</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== AI WORKFLOW — 04 ========== -->
+  <section class="ai-section" id="ai">
+    <div class="ai-section__header scroll-reveal">
+      <span class="section-tag">04 / КАК Я РАБОТАЮ С AI</span>
+      <span class="ai-section__header-right">РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ — НЕ ЭКСПЕРИМЕНТЫ</span>
+    </div>
+
+    <div class="ai-grid">
+
+      <div class="ai-cell scroll-reveal">
+        <span class="ai-cell__num">1</span>
+        <span class="ai-cell__title">ТЗ + ПЛАН</span>
+        <p class="ai-cell__desc">Описание ТЗ совместно с AI, разработка общего плана работ с этапами.</p>
+      </div>
+
+      <div class="ai-cell scroll-reveal delay-1">
+        <span class="ai-cell__num">2</span>
+        <span class="ai-cell__title">МАКЕТЫ</span>
+        <p class="ai-cell__desc">Автоматизированное построение дизайн-макетов (Pencil MCP) по ранее составленному техническому заданию.</p>
+      </div>
+
+      <div class="ai-cell scroll-reveal delay-2">
+        <span class="ai-cell__num">3</span>
+        <span class="ai-cell__title">РАЗРАБОТКА</span>
+        <p class="ai-cell__desc">Уточнение плана этапа и разработка с AI-агентами строго в рамках спеки и правил проекта. Подход — Agentic TDD.</p>
+      </div>
+
+      <div class="ai-cell scroll-reveal delay-3">
+        <span class="ai-cell__num">4</span>
+        <span class="ai-cell__title">ПРОВЕРКА</span>
+        <p class="ai-cell__desc">Тесты, ESLint, Prettier. Ручной review при архитектурных изменениях. Для фронта — автоматизированная проверка соответствия макетам.</p>
+      </div>
+
+      <div class="ai-cell scroll-reveal" style="--reveal-delay: 0.32s">
+        <span class="ai-cell__num">5</span>
+        <span class="ai-cell__title">ДЕПЛОЙ</span>
+        <p class="ai-cell__desc">Автоматизированное и, при необходимости, ручное CR. Пуш в git, GitLab CI/CD. Ручная проверка на dev, затем прод.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta" id="cta">
+    <div class="cta__top scroll-reveal">
+      <span class="cta__tag">05 / КОНТАКТ</span>
+      <div class="cta__badge">
+        <span class="cta__badge-dot"></span>
+        <span>OPEN TO WORK</span>
+      </div>
+    </div>
+
+    <h2 class="cta__headline scroll-reveal delay-1">Внедрим AI в ваш engineering — или создадим что-то крутое вместе</h2>
+
+    <div class="cta__contacts scroll-reveal delay-2">
+      <div class="cta__contact">
+        <span class="cta__contact-label">EMAIL</span>
+        <a href="mailto:nefedovaleksandr196@gmail.com" class="cta__contact-value">nefedovaleksandr196@gmail.com</a>
+      </div>
+      <div class="cta__contact">
+        <span class="cta__contact-label">PHONE</span>
+        <a href="tel:+79220389216" class="cta__contact-value">+7 (922) 038-92-16</a>
+      </div>
+      <div class="cta__contact">
+        <span class="cta__contact-label">FORMAT</span>
+        <span class="cta__contact-value">Remote Only</span>
+      </div>
+      <div class="cta__contact">
+        <span class="cta__contact-label">LOCATION</span>
+        <span class="cta__contact-value">Moscow, Russia</span>
+      </div>
+    </div>
+
+    <a href="https://t.me/asnefedov" target="_blank" rel="noopener noreferrer"
+      class="btn btn--dark cta__btn scroll-reveal delay-3" id="telegramBtn">
+      НАПИСАТЬ В TELEGRAM
+    </a>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <span class="footer__left">ALEKSANDR NEFEDOV © 2026</span>
+    <span class="footer__right">FULLSTACK TEAM LEAD / AI ENGINEER</span>
+    <span class="footer__version">v1.1.0</span>
+  </footer>
+
+  <script src="js/main.js?v=1.1.0"></script>
+</body>
+
+</html>
