@@ -1,0 +1,1491 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "page1",
+      "x": 0,
+      "y": 0,
+      "name": "Nefedova Svetlana — Desktop Light",
+      "width": 1440,
+      "fill": "#F5F6F8",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Pdcc2",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 80,
+          "fill": "#FFFFFF",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#DDE2E8"
+          },
+          "padding": [
+            0,
+            100
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "SgFO2",
+              "name": "logoWrap",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "B1X3Q",
+                  "name": "logoMark",
+                  "width": 44,
+                  "height": 44,
+                  "fill": "#D4A020",
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cSu88",
+                      "x": 5,
+                      "y": 5,
+                      "name": "logoBorder",
+                      "width": 34,
+                      "height": 34,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#1A233240"
+                      }
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "RPhJY",
+                      "x": 5,
+                      "y": 21,
+                      "name": "logoHLine",
+                      "fill": "#1A233230",
+                      "width": 34,
+                      "height": 1
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "uWIcZ",
+                      "x": 21,
+                      "y": 5,
+                      "name": "logoVLine",
+                      "fill": "#1A233220",
+                      "width": 1,
+                      "height": 34
+                    },
+                    {
+                      "type": "text",
+                      "id": "JPZys",
+                      "x": 12,
+                      "y": 12,
+                      "name": "logoText",
+                      "fill": "#1A2332",
+                      "content": "СН",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "enm0O",
+                  "name": "logoLabel",
+                  "fill": "#253347",
+                  "content": "СВЕТЛАНА НЕФЕДОВА",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 11,
+                  "fontWeight": "semibold",
+                  "letterSpacing": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ReEXD",
+              "name": "navLinks",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "z7k0Z",
+                  "name": "nl1",
+                  "fill": "#5A6B7A",
+                  "content": "О СЕБЕ",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "semibold",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "PQz8K",
+                  "name": "nl2",
+                  "fill": "#5A6B7A",
+                  "content": "УСЛУГИ",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "semibold",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "pc1xX",
+                  "name": "nl3",
+                  "fill": "#5A6B7A",
+                  "content": "ПОРТФОЛИО",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "semibold",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "SAHBI",
+                  "name": "nl4",
+                  "fill": "#5A6B7A",
+                  "content": "КОНТАКТЫ",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "semibold",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nvGMZ",
+              "name": "phoneBtn",
+              "cornerRadius": 2,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#D4A020"
+              },
+              "padding": [
+                10,
+                20
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yUQ1B",
+                  "name": "phoneTxt",
+                  "fill": "#D4A020",
+                  "content": "+7 902 874-48-10",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 12,
+                  "fontWeight": "semibold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "nGjaC",
+          "name": "Hero",
+          "width": "fill_container",
+          "height": 720,
+          "fill": "#FFFFFF",
+          "gap": 80,
+          "padding": [
+            0,
+            100
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZIT3G",
+              "name": "heroLeft",
+              "width": 620,
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nTx8w",
+                  "name": "badge",
+                  "fill": "#EEF1F5",
+                  "cornerRadius": 2,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#DDE2E8"
+                  },
+                  "gap": 8,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "H5Zsn",
+                      "name": "badgeDot",
+                      "width": 6,
+                      "height": 6,
+                      "fill": "#D4A020",
+                      "cornerRadius": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "AI9PM",
+                      "name": "badgeTxt",
+                      "fill": "#5A6B7A",
+                      "content": "25+ лет в архитектуре",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UYeqi",
+                  "name": "heroTitleBlock",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "E4dwI",
+                      "name": "heroTitle",
+                      "fill": "#1A2332",
+                      "textGrowth": "fixed-width",
+                      "width": 620,
+                      "content": "Архитектурное проектирование жилых, общественных и производственных зданий",
+                      "lineHeight": 1.1,
+                      "fontFamily": "Newsreader",
+                      "fontSize": 52,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UZX80",
+                      "name": "heroSub",
+                      "fill": "#5A6B7A",
+                      "textGrowth": "fixed-width",
+                      "width": 560,
+                      "content": "Светлана Нефедова — архитектор с опытом более 25 лет. Проектирую здания так, чтобы они были не только выразительными, но и удобными, понятными в реализации и комфортными для людей.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "5QUvk",
+                  "name": "heroCtaRow",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bRSJK",
+                      "name": "ctaBtn",
+                      "fill": "#D4A020",
+                      "cornerRadius": 2,
+                      "padding": [
+                        16,
+                        36
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wtZNB",
+                          "name": "ctaTxt",
+                          "fill": "#1A2332",
+                          "content": "Позвонить",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "semibold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UCJqh",
+              "name": "heroRight",
+              "opacity": 0.8,
+              "metadata": {
+                "type": "unsplash",
+                "username": "tiend_",
+                "link": "https://unsplash.com/@tiend_",
+                "author": "TienDat Nguyen"
+              },
+              "width": 540,
+              "height": 580,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1660861899236-9aa6bd221e05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5ODE0NDR8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 2
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "59dXM",
+          "name": "About",
+          "width": "fill_container",
+          "fill": "#F5F6F8",
+          "gap": 80,
+          "padding": 100,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "fy4n4",
+              "name": "abtLeft",
+              "width": 600,
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UluVe",
+                  "name": "abtLabel",
+                  "fill": "#9BA3AD",
+                  "content": "АРХИТЕКТОР",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "t8tr6",
+                  "name": "abtTitle",
+                  "fill": "#1A2332",
+                  "content": "Обо мне",
+                  "fontFamily": "Newsreader",
+                  "fontSize": 42,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "kOV9P",
+                  "name": "abtDivider",
+                  "width": 48,
+                  "height": 2,
+                  "fill": "#D4A020"
+                },
+                {
+                  "type": "text",
+                  "id": "crTWU",
+                  "name": "abtText",
+                  "fill": "#5A6B7A",
+                  "textGrowth": "fixed-width",
+                  "width": 580,
+                  "content": "Я архитектор с опытом более 25 лет. Работаю над проектами жилых, общественных и производственных зданий, уделяя внимание не только архитектурному образу, но и тому, как пространство будет работать для людей каждый день. Для меня важно, чтобы проект был продуманным, комфортным, реалистичным в реализации и соответствовал задачам заказчика.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "t1zJO",
+                  "name": "abtStats",
+                  "gap": 48,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dCBak",
+                      "name": "stat1",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ywa2D",
+                          "name": "stat1val",
+                          "fill": "#D4A020",
+                          "content": "25+",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 36,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tEc7i",
+                          "name": "stat1lbl",
+                          "fill": "#9BA3AD",
+                          "content": "лет опыта",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "2DFE4",
+                      "name": "stat2",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YKTyQ",
+                          "name": "stat2val",
+                          "fill": "#D4A020",
+                          "content": "100+",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 36,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "WgycN",
+                          "name": "stat2lbl",
+                          "fill": "#9BA3AD",
+                          "content": "реализованных объектов",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jKuV1",
+                      "name": "stat3",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nigZL",
+                          "name": "stat3val",
+                          "fill": "#D4A020",
+                          "content": "3",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 36,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "5cH0l",
+                          "name": "stat3lbl",
+                          "fill": "#9BA3AD",
+                          "content": "типа объектов",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "O22bT",
+                  "name": "toolsDivider",
+                  "width": 48,
+                  "height": 1,
+                  "fill": "#DDE2E8"
+                },
+                {
+                  "type": "text",
+                  "id": "7kCIq",
+                  "name": "toolsLabel",
+                  "fill": "#9BA3AD",
+                  "content": "ИНСТРУМЕНТЫ",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "frame",
+                  "id": "r8nzO",
+                  "name": "toolsRow",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "W00IQ",
+                      "name": "bimTag",
+                      "fill": "#EEF1F5",
+                      "cornerRadius": 2,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#DDE2E8"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "dwgcB",
+                          "name": "bimIcon",
+                          "width": 13,
+                          "height": 13,
+                          "iconFontName": "layers",
+                          "iconFontFamily": "lucide",
+                          "fill": "#253347"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rSlHi",
+                          "name": "bimTxt",
+                          "fill": "#253347",
+                          "content": "BIM-проектирование",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HvM1C",
+                      "name": "modTag",
+                      "fill": "#EEF1F5",
+                      "cornerRadius": 2,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#DDE2E8"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "TpXhb",
+                          "name": "modIcon",
+                          "width": 13,
+                          "height": 13,
+                          "iconFontName": "drafting-compass",
+                          "iconFontFamily": "lucide",
+                          "fill": "#5A6B7A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "i8VKL",
+                          "name": "modTxt",
+                          "fill": "#5A6B7A",
+                          "content": "Современные методы",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cOGkO",
+              "name": "photoWrap",
+              "width": 480,
+              "height": 572,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./photo.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 2,
+              "layout": "vertical",
+              "justifyContent": "end"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yEYoa",
+          "name": "Services",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 56,
+          "padding": 100,
+          "children": [
+            {
+              "type": "frame",
+              "id": "D6JjV",
+              "name": "svcHeader",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iSrc0",
+                  "name": "svcLabel",
+                  "fill": "#9BA3AD",
+                  "content": "УСЛУГИ",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "TgZss",
+                  "name": "svcTitle",
+                  "fill": "#1A2332",
+                  "content": "Чем я могу помочь",
+                  "fontFamily": "Newsreader",
+                  "fontSize": 42,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QbATf",
+              "name": "svcGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8ZYTm",
+                  "name": "col1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fxbm2",
+                      "name": "card1",
+                      "width": "fill_container",
+                      "fill": "#F5F6F8",
+                      "cornerRadius": 2,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#EDF0F4"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "6vLXi",
+                          "name": "c1n",
+                          "fill": "#1A2332",
+                          "content": "Эскизное проектирование",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 20,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vqrHD",
+                          "name": "c1d",
+                          "fill": "#8E9BAA",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Поиск архитектурной идеи, формирование концепции и планировочных решений.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "emZI2",
+                      "name": "card2",
+                      "width": "fill_container",
+                      "fill": "#F5F6F8",
+                      "cornerRadius": 2,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#EDF0F4"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xY0cY",
+                          "name": "c2n",
+                          "fill": "#1A2332",
+                          "content": "Рабочее проектирование",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 20,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "643Kv",
+                          "name": "c2d",
+                          "fill": "#8E9BAA",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Подготовка рабочей документации для дальнейшей реализации проекта.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ln54g",
+                  "name": "col2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "znPl7",
+                      "name": "card3",
+                      "width": "fill_container",
+                      "fill": "#F5F6F8",
+                      "cornerRadius": 2,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#EDF0F4"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LdUov",
+                          "name": "c3n",
+                          "fill": "#1A2332",
+                          "content": "Проектная документация",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 20,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "PcBfT",
+                          "name": "c3d",
+                          "fill": "#8E9BAA",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Системная проработка проектных решений в соответствии с требованиями задачи.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kbgDw",
+                      "name": "card4",
+                      "width": "fill_container",
+                      "fill": "#F5F6F8",
+                      "cornerRadius": 2,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#EDF0F4"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pu9bf",
+                          "name": "c4n",
+                          "fill": "#1A2332",
+                          "content": "Сопровождение в экспертизе",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 20,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "RV0DY",
+                          "name": "c4d",
+                          "fill": "#8E9BAA",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Помощь в подготовке и сопровождении проекта при прохождении экспертизы.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TgsdT",
+                  "name": "col3",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "GNeW1",
+                      "name": "card5",
+                      "width": "fill_container",
+                      "fill": "#F5F6F8",
+                      "cornerRadius": 2,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#EDF0F4"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "W7g1X",
+                          "name": "c5n",
+                          "fill": "#1A2332",
+                          "content": "Составление ТЗ",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 20,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ThFOV",
+                          "name": "c5d",
+                          "fill": "#8E9BAA",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Помогаю сформулировать техническое задание, чтобы проект изначально двигался в верном направлении.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NZwQX",
+                      "name": "card6",
+                      "width": "fill_container",
+                      "fill": "#253347",
+                      "cornerRadius": 2,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#1A2332"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vvD77",
+                          "name": "c6n",
+                          "fill": "#FFFFFF",
+                          "content": "Авторский надзор",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 20,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xhHmj",
+                          "name": "c6d",
+                          "fill": "#8E9BAA",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Контроль соответствия реализации принятым архитектурным решениям.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "06X8k",
+          "name": "Portfolio",
+          "width": "fill_container",
+          "fill": "#F5F6F8",
+          "layout": "vertical",
+          "gap": 56,
+          "padding": 100,
+          "children": [
+            {
+              "type": "frame",
+              "id": "9bK6D",
+              "name": "pfHeader",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "U5atT",
+                  "name": "pfLabel",
+                  "fill": "#9BA3AD",
+                  "content": "ПОРТФОЛИО",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "VPs21",
+                  "name": "pfTitle",
+                  "fill": "#1A2332",
+                  "content": "Избранные проекты",
+                  "fontFamily": "Newsreader",
+                  "fontSize": 42,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "grVps",
+                  "name": "pfSub",
+                  "fill": "#9BA3AD",
+                  "content": "Фотографии и описания объектов будут добавлены позже.",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YPiT5",
+              "name": "pfGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "UWHkR",
+                  "name": "pfCard1",
+                  "width": "fill_container",
+                  "height": 440,
+                  "fill": "#DDE2E8",
+                  "cornerRadius": 2,
+                  "layout": "vertical",
+                  "padding": 24,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ppszx",
+                      "name": "pfLbl1",
+                      "fill": "#FFFFFFCC",
+                      "cornerRadius": 2,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PeLVt",
+                          "name": "pfT1",
+                          "fill": "#1A2332",
+                          "content": "Жилой объект",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XDO3a",
+                          "name": "pfS1",
+                          "fill": "#9BA3AD",
+                          "content": "фото — плейсхолдер",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kb9uZ",
+                  "name": "pfCard2",
+                  "width": "fill_container",
+                  "height": 440,
+                  "fill": "#C8D0DA",
+                  "cornerRadius": 2,
+                  "layout": "vertical",
+                  "padding": 24,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5w9Ma",
+                      "name": "pfLbl2",
+                      "fill": "#FFFFFFCC",
+                      "cornerRadius": 2,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UQC6O",
+                          "name": "pfT2",
+                          "fill": "#1A2332",
+                          "content": "Общественное здание",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "V9bpp",
+                          "name": "pfS2",
+                          "fill": "#9BA3AD",
+                          "content": "фото — плейсхолдер",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UHcw8",
+                  "name": "pfCard3",
+                  "width": "fill_container",
+                  "height": 440,
+                  "fill": "#B8C4D0",
+                  "cornerRadius": 2,
+                  "layout": "vertical",
+                  "padding": 24,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "WOKNT",
+                      "name": "pfLbl3",
+                      "fill": "#FFFFFFCC",
+                      "cornerRadius": 2,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hqSOR",
+                          "name": "pfT3",
+                          "fill": "#1A2332",
+                          "content": "Производственный объект",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Fm9ag",
+                          "name": "pfS3",
+                          "fill": "#9BA3AD",
+                          "content": "фото — плейсхолдер",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "w4BOM",
+                  "name": "pfCard4",
+                  "width": "fill_container",
+                  "height": 440,
+                  "fill": "#A8B6C4",
+                  "cornerRadius": 2,
+                  "layout": "vertical",
+                  "padding": 24,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jRbmK",
+                      "name": "pfLbl4",
+                      "fill": "#FFFFFFCC",
+                      "cornerRadius": 2,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "coYQh",
+                          "name": "pfT4",
+                          "fill": "#1A2332",
+                          "content": "Концептуальный проект",
+                          "fontFamily": "Newsreader",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "iJUdZ",
+                          "name": "pfS4",
+                          "fill": "#9BA3AD",
+                          "content": "фото — плейсхолдер",
+                          "fontFamily": "Space Mono",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ivKnX",
+          "name": "Contacts",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 100,
+          "children": [
+            {
+              "type": "frame",
+              "id": "icrJ1",
+              "name": "ctLeft",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Pg1L6",
+                  "name": "ctLabel",
+                  "fill": "#9BA3AD",
+                  "content": "КОНТАКТЫ",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "EHB9R",
+                  "name": "ctTitle",
+                  "fill": "#1A2332",
+                  "content": "Свяжитесь со мной",
+                  "fontFamily": "Newsreader",
+                  "fontSize": 42,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Jibef",
+                  "name": "ctSub",
+                  "fill": "#5A6B7A",
+                  "textGrowth": "fixed-width",
+                  "width": 600,
+                  "content": "Если вам нужен архитектор для проектирования объекта или профессиональная консультация, свяжитесь удобным способом.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bHFgU",
+              "name": "ctDivider",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#EDF0F4"
+            },
+            {
+              "type": "frame",
+              "id": "At8EF",
+              "name": "ctRow",
+              "gap": 64,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "erp65",
+                  "name": "ctPhone",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gc47W",
+                      "name": "ctPhoneLbl",
+                      "fill": "#9BA3AD",
+                      "content": "ТЕЛЕФОН",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "iAK6C",
+                      "name": "ctPhoneVal",
+                      "fill": "#1A2332",
+                      "content": "+7 902 874-48-10",
+                      "fontFamily": "Newsreader",
+                      "fontSize": 28,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yfx0b",
+                  "name": "ctEmail",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "brL1n",
+                      "name": "ctEmailLbl",
+                      "fill": "#9BA3AD",
+                      "content": "EMAIL",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "hiT2O",
+                      "name": "ctEmailVal",
+                      "fill": "#1A2332",
+                      "content": "n-sveta-d@yandex.ru",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1omEn",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "#1A2332",
+          "padding": [
+            40,
+            100
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "L9cXu",
+              "name": "ftrLeft",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "l8gl7",
+                  "name": "ftrLogoBox",
+                  "width": 32,
+                  "height": 32,
+                  "fill": "#D4A020",
+                  "cornerRadius": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qR3QU",
+                      "name": "ftrLogoTxt",
+                      "fill": "#1A2332",
+                      "content": "СН",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "6tk4I",
+                  "name": "ftrName",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "p9u8r",
+                      "name": "ftrNameMain",
+                      "fill": "#FFFFFF",
+                      "content": "Светлана Нефедова",
+                      "fontFamily": "Newsreader",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "XUst1",
+                      "name": "ftrNameSub",
+                      "fill": "#8E9BAA",
+                      "content": "Архитектор",
+                      "fontFamily": "Space Mono",
+                      "fontSize": 10,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZZxCh",
+              "name": "ftrRight",
+              "gap": 48,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "T9ryk",
+                  "name": "ftrPhone",
+                  "fill": "#8E9BAA",
+                  "content": "+7 902 874-48-10",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Nyz1G",
+                  "name": "ftrEmail",
+                  "fill": "#8E9BAA",
+                  "content": "n-sveta-d@yandex.ru",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "xKXvE",
+                  "name": "ftrCopy",
+                  "fill": "#5A6B7A",
+                  "content": "© 2026",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "GKcXm",
+                  "name": "devLink",
+                  "fill": "#5A6B7A",
+                  "content": "Разработано nefedov.tech",
+                  "fontFamily": "Space Mono",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

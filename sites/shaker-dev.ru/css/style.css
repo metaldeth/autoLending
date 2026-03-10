@@ -49,6 +49,71 @@
   --map-blur: drop-shadow(0 0 2px rgba(102, 178, 46, 0.1));
 }
 
+/* Theme transition — smooth switch for elements using CSS variables */
+.trust,
+.process,
+.competencies,
+.advantages,
+.portfolio,
+.production,
+.contacts,
+.footer,
+.mobile-menu,
+.trust__card,
+.trust__cards,
+.portfolio__card,
+.portfolio__card-img,
+.portfolio__card-body,
+.footer__divider,
+.process__step,
+.competencies__col,
+.competencies__divider,
+.advantages__bar,
+.badge,
+.btn--ghost {
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+}
+
+.section-label,
+.section-title,
+.trust__card-title,
+.trust__card-text,
+.trust__metric,
+.portfolio__card-body h3,
+.portfolio__card-body p,
+.production__title,
+.production__text,
+.production__num,
+.production__stat-label,
+.contacts__title,
+.contacts__quote,
+.footer__logo,
+.footer__copy,
+.footer__credit,
+.process__step-title,
+.process__step-text,
+.process__num,
+.competencies__col-title,
+.competencies__list li,
+.advantages__title,
+.advantages__sub,
+.advantages__content h3,
+.advantages__content p,
+.hero__title,
+.hero__sub,
+.form__label,
+.header__logo,
+.header__nav-link {
+  -webkit-transition: color 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out;
+}
+
+.competencies__list li::before {
+  -webkit-transition: color 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out;
+}
+
 /* ============================================================
    Reset & Base
    ============================================================ */
@@ -68,8 +133,8 @@ body {
   line-height: 1.5;
   color: var(--text);
   background-color: var(--bg);
-  -webkit-transition: background-color 0.25s, color 0.25s;
-  transition: background-color 0.25s, color 0.25s;
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -119,8 +184,8 @@ button {
   border-radius: 6px;
   padding: 14px 28px;
   cursor: pointer;
-  transition: opacity 0.15s, -webkit-transform 0.15s, transform 0.15s;
-  -webkit-transition: opacity 0.15s, -webkit-transform 0.15s, transform 0.15s;
+  transition: opacity 0.15s, -webkit-transform 0.15s, transform 0.15s, background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+  -webkit-transition: opacity 0.15s, -webkit-transform 0.15s, transform 0.15s, background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-color 0.35s ease-in-out;
   white-space: nowrap;
 }
 
@@ -207,8 +272,8 @@ button {
   height: 72px;
   background-color: var(--header-bg);
   border-bottom: 1px solid transparent;
-  -webkit-transition: border-color 0.25s, background-color 0.25s, -webkit-backdrop-filter 0.25s;
-  transition: border-color 0.25s, background-color 0.25s, backdrop-filter 0.25s;
+  -webkit-transition: border-color 0.35s ease-in-out, background-color 0.35s ease-in-out, -webkit-backdrop-filter 0.35s ease-in-out;
+  transition: border-color 0.35s ease-in-out, background-color 0.35s ease-in-out, backdrop-filter 0.35s ease-in-out;
 }
 
 .header.scrolled {
@@ -290,8 +355,8 @@ button {
   padding: 3px;
   cursor: pointer;
   flex-shrink: 0;
-  -webkit-transition: background-color 0.25s;
-  transition: background-color 0.25s;
+  -webkit-transition: background-color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out;
 }
 
 .theme-toggle__knob {
@@ -300,8 +365,8 @@ button {
   height: 22px;
   background-color: var(--accent);
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 0.25s;
-  transition: transform 0.25s;
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
@@ -418,6 +483,8 @@ button {
   padding: 72px 120px 0;
   background-color: var(--bg);
   overflow: hidden;
+  -webkit-transition: background-color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out;
 }
 
 .hero__left {
@@ -443,24 +510,32 @@ button {
   height: 100%;
   object-fit: cover;
   max-height: 560px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .hero__img--dark {
-  display: block;
+  opacity: 1;
 }
 
 .hero__img--light {
-  display: none;
+  opacity: 0;
 }
 
 [data-theme="light"] .hero__img--dark {
-  display: none;
+  opacity: 0;
 }
 
 [data-theme="light"] .hero__img--light {
-  display: block;
+  opacity: 1;
 }
 
 /* Badge */
@@ -738,6 +813,8 @@ button {
 .trust {
   background-color: var(--bg-alt);
   padding: 60px 0;
+  -webkit-transition: background-color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out;
 }
 
 .trust__container {
@@ -765,6 +842,8 @@ button {
   background-color: var(--bg-card);
   border-radius: 8px;
   padding: 32px;
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 }
 
 .trust__metric {
@@ -772,12 +851,16 @@ button {
   font-size: 36px;
   font-weight: 700;
   color: var(--accent);
+  -webkit-transition: color 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out;
 }
 
 .trust__card-title {
   font-size: 16px;
   font-weight: 600;
   color: var(--text);
+  -webkit-transition: color 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out;
 }
 
 .trust__card-text {
@@ -785,6 +868,8 @@ button {
   font-weight: 400;
   line-height: 1.6;
   color: var(--text-muted);
+  -webkit-transition: color 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out;
 }
 
 /* ============================================================
@@ -1200,8 +1285,8 @@ button {
   font-weight: 400;
   color: var(--text);
   outline: none;
-  -webkit-transition: border-color 0.15s;
-  transition: border-color 0.15s;
+  -webkit-transition: border-color 0.15s, background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  transition: border-color 0.15s, background-color 0.35s ease-in-out, color 0.35s ease-in-out;
   -webkit-appearance: none;
   appearance: none;
 }
