@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOW — Умные питьевые станции для фитнес-клубов</title>
+  <meta name="description" content="Витаминные напитки на заказ прямо в твоём фитнес-клубе. Подписка от 499 ₽/мес.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FLOW — Умные питьевые станции для фитнес-клубов">
+  <meta property="og:description" content="Витаминные напитки на заказ прямо в твоём фитнес-клубе. Подписка от 499 ₽/мес.">
+  <meta property="og:image" content="img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FLOW — Умные питьевые станции для фитнес-клубов">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== MENU OVERLAY ===== -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__nav">
+      <a href="#how-it-works" class="menu__link">КАК ЭТО РАБОТАЕТ</a>
+      <a href="#ingredients" class="menu__link">СОСТАВ</a>
+      <a href="#subscription" class="menu__link">ПОДПИСКА</a>
+      <a href="#clubs" class="menu__link">ДЛЯ КЛУБОВ</a>
+      <a href="#about" class="menu__link">О FLOW</a>
+    </nav>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="nav">
+      <a href="#" class="nav__logo">FLOW</a>
+      <button class="nav__burger" id="menuToggle" aria-label="Открыть меню" aria-expanded="false"
+        aria-controls="menu">
+        <img src="img/icon-hamburger.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero__media">
+        <img src="img/hero-bg.png" alt="Девушка с бутылкой FLOW в зале" class="hero__img" width="402" height="697">
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="hero__body">
+        <h1 class="hero__title">Витамины<br>Энергия<br>Вкус</h1>
+        <p class="hero__sub">Твой ежедневный литр<br>чистой пользы</p>
+      </div>
+    </section>
+
+    <!-- ===== HYDRATION ===== -->
+    <section class="hydration" id="how-it-works">
+      <div class="container">
+        <h2 class="hydration__title">Эволюция гидратации</h2>
+        <p class="hydration__sub">Твой персональный источник идеальной энергии</p>
+      </div>
+      <div class="hydration__visual">
+        <div class="hydration__glow"></div>
+        <img src="img/device.png" alt="Станция FLOW" class="hydration__device" width="295" height="427">
+        <span class="badge badge--tr">
+          <img src="img/icon-temp.svg" width="14" height="14" alt="">
+          Идеальные 4°C
+        </span>
+        <span class="badge badge--ml">
+          <img src="img/icon-bubbles.svg" width="16" height="16" alt="">
+          Газированные напитки
+        </span>
+        <span class="badge badge--mr">
+          <img src="img/icon-drop.svg" width="16" height="16" alt="">
+          Глубокая фильтрация
+        </span>
+        <span class="badge badge--bc">
+          <img src="img/icon-sparkles.svg" width="18" height="18" alt="">
+          Уникальные вкусы
+        </span>
+      </div>
+    </section>
+
+    <!-- ===== FLAVORS ===== -->
+    <section class="flavors" id="ingredients">
+      <div class="container">
+        <h2 class="section-title">Выбери свой уникальный вкус</h2>
+      </div>
+      <div class="flavors__scroll">
+        <div class="flavors__track">
+          <div class="flavor-item flavor-item--side">
+            <img src="img/flavor1.png" alt="Вкус 1" width="330" height="171">
+          </div>
+          <div class="flavor-item flavor-item--center">
+            <img src="img/flavor2.png" alt="Вкус 2" width="330" height="181">
+          </div>
+          <div class="flavor-item flavor-item--side">
+            <img src="img/flavor3.png" alt="Вкус 3" width="330" height="171">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CALCULATOR ===== -->
+    <section class="calc-section" id="calculator">
+      <div class="container">
+        <h2 class="section-title">Рассчитай свою выгоду</h2>
+        <div class="calc-card">
+          <div class="calc-slider-wrap">
+            <div class="calc-slider-row">
+              <span class="calc-label">Количество тренировок в месяц</span>
+              <span class="calc-count" id="workoutsValue">12</span>
+            </div>
+            <input type="range" class="calc-slider" id="workoutsSlider" min="1" max="30" value="12"
+              aria-label="Количество тренировок в месяц">
+          </div>
+          <div class="calc-rows">
+            <div class="calc-row calc-row--bottles">
+              <div class="calc-row__meta">
+                <span class="calc-row__name">Напитки в бутылках</span>
+                <span class="calc-row__desc">1 литр каждую тренировку</span>
+              </div>
+              <div class="calc-row__price calc-row__price--old" id="bottlePrice">3&nbsp;600&nbsp;₽</div>
+            </div>
+            <div class="calc-row calc-row--flow">
+              <div class="calc-row__meta">
+                <span class="calc-row__name">Абонемент FLOW</span>
+                <span class="calc-row__desc">1 литр каждый день</span>
+              </div>
+              <div class="calc-row__price" id="flowPrice">499&nbsp;₽</div>
+            </div>
+          </div>
+          <div class="calc-savings">
+            <span class="calc-savings__label">Выгода</span>
+            <span class="calc-savings__value" id="savings">3&nbsp;101&nbsp;₽</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BENEFITS ===== -->
+    <section class="benefits" id="benefits">
+      <div class="container">
+        <h2 class="section-title">Начни свой FLOW</h2>
+      </div>
+      <div class="benefits__scroll" id="benefitsScroll">
+        <div class="benefits__track">
+          <article class="bcard">
+            <img src="img/card1-bg.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Фокус и энергия</h3>
+              <p class="bcard__text">Витамины группы B и C для высокой концентрации на протяжении всей тренировки</p>
+            </div>
+          </article>
+          <article class="bcard">
+            <img src="img/card2-bg.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Восстановление</h3>
+              <p class="bcard__text">Эффективная перезагрузка после интенсивных физических нагрузок</p>
+            </div>
+          </article>
+          <article class="bcard">
+            <img src="img/card3-bg.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Без сахара и &lt;5 ккал</h3>
+              <p class="bcard__text">Максимум пользы и вкуса для поддержания идеальной формы</p>
+            </div>
+          </article>
+          <article class="bcard">
+            <img src="img/card4-bg.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Минеральный баланс</h3>
+              <p class="bcard__text">Магний, калий и натрий для поддержания максимальной выносливости</p>
+            </div>
+          </article>
+          <article class="bcard">
+            <img src="img/card5-bg.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Натуральный вкус</h3>
+              <p class="bcard__text">Без красителей, глютена и искусственных ароматизаторов</p>
+            </div>
+          </article>
+          <article class="bcard">
+            <img src="img/card6-bg.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Забота об экологии</h3>
+              <p class="bcard__text">Наполняй свой шейкер и тренируйся без лишнего пластика</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="dots" id="benefitsDots" role="tablist" aria-label="Слайды карусели">
+        <button class="dot dot--active" data-index="0" aria-label="Слайд 1" role="tab" aria-selected="true"></button>
+        <button class="dot" data-index="1" aria-label="Слайд 2" role="tab" aria-selected="false"></button>
+        <button class="dot" data-index="2" aria-label="Слайд 3" role="tab" aria-selected="false"></button>
+        <button class="dot" data-index="3" aria-label="Слайд 4" role="tab" aria-selected="false"></button>
+        <button class="dot" data-index="4" aria-label="Слайд 5" role="tab" aria-selected="false"></button>
+        <button class="dot" data-index="5" aria-label="Слайд 6" role="tab" aria-selected="false"></button>
+      </div>
+    </section>
+
+    <!-- Placeholder sections for menu anchors (content TBD) -->
+    <section id="subscription" class="section-anchor" aria-label="Подписка"></section>
+    <section id="clubs" class="section-anchor" aria-label="Для клубов"></section>
+    <section id="about" class="section-anchor" aria-label="О FLOW"></section>
+
+  </main>
+
+  <!-- ===== CTA ===== -->
+  <footer class="cta-bar">
+    <div class="container">
+      <a href="#subscription" class="btn-primary">Попробовать бесплатно</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
