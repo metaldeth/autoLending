@@ -35,6 +35,7 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,11 +67,14 @@ button {
 }
 
 /* ---- Layout wrapper ---- */
+/* overflow-x: hidden forces overflow-y to compute to auto (CSS overflow spec),
+   which creates a second vertical scrollbar on wide layouts — use clip + visible. */
 .page-wrap {
   max-width: 402px;
   margin: 0 auto;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   min-height: 100vh;
   background: var(--bg);
 }
@@ -1688,17 +1692,10 @@ button {
     width: 300px;
   }
 
-  /* Flavors: no horizontal scroll, show all */
-  .flavors__scroll {
-    overflow-x: visible;
-  }
-
-  .flavors__track {
-    width: auto;
-    -webkit-justify-content: center;
-    justify-content: center;
-    padding: 20px 32px;
-  }
+  /* Badges — anchored to image center (image: 300px, center: 50%) */
+  .badge--tr { top: 8px;   left: calc(50% + 80px);  right: auto; }
+  .badge--ml { top: 200px; left: calc(50% - 260px); }
+  .badge--mr { top: 260px; left: calc(50% + 154px); right: auto; }
 
   /* Calculator */
   .calc-section {
@@ -1708,6 +1705,10 @@ button {
   .calc-card {
     padding: 24px;
     gap: 20px;
+    width: 100%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .calc-row__name {
@@ -1834,12 +1835,13 @@ button {
     width: 340px;
   }
 
-  /* Badges repositioned for wider visual */
-  .badge--tr { top: 8px;   right: 80px; }
-  .badge--ml { top: 200px; left: 60px; }
-  .badge--mr { top: 260px; right: 60px; }
+  /* Badges — anchored to image center (image: 340px, center: 50%) */
+  .badge--tr { top: 30px;  left: calc(50% + 100px); right: auto; }
+  .badge--ml { top: 210px; left: calc(50% - 310px); }
+  .badge--mr { top: 280px; left: calc(50% + 174px); right: auto; }
+  .badge--bc { bottom: 90px; }
 
-  /* Flavors */
+  /* Flavors — all 3 cards fit (3×330+2×16=1022px ≤ 1100px), center them */
   .flavors {
     padding: 72px 0;
   }
@@ -1848,9 +1850,15 @@ button {
     padding: 0 60px;
   }
 
+  .flavors__scroll {
+    overflow-x: visible;
+  }
+
   .flavors__track {
-    gap: 24px;
-    padding: 20px 60px;
+    width: auto;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 20px 39px;
   }
 
   /* Calculator */
@@ -1861,6 +1869,10 @@ button {
   .calc-card {
     padding: 32px;
     gap: 24px;
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .calc-label {
@@ -1881,6 +1893,24 @@ button {
 
   .calc-savings__value {
     font-size: 28px;
+  }
+
+  /* Clubs calc — limit width like index calc */
+  .clubs-calc {
+    padding: 60px 60px 0;
+  }
+
+  .clubs-calc .section-title,
+  .clubs-calc .calc-card,
+  .clubs-calc__note {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .clubs-calc__note {
+    margin-top: 12px;
   }
 
   /* Benefits: 3-column grid */
