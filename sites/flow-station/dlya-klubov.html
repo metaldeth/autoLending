@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOW — Для фитнес-клубов</title>
+  <meta name="description" content="Установим умную станцию спортивной воды FLOW бесплатно. Зарабатывайте на питьевой зоне.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- MENU OVERLAY -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__header">
+      <span class="menu__logo">FLOW</span>
+      <button class="menu__close" id="menuClose" aria-label="Закрыть меню">
+        <img src="icons/close.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+    <nav class="menu__nav">
+      <a href="index.html"       class="menu__link">КАК ЭТО РАБОТАЕТ</a>
+      <a href="sostav.html"      class="menu__link">СОСТАВ</a>
+      <a href="podpiska.html"    class="menu__link">ПОДПИСКА</a>
+      <a href="dlya-klubov.html" class="menu__link menu__link--active">ДЛЯ КЛУБОВ</a>
+      <a href="o-flow.html"      class="menu__link menu__link--muted">О FLOW</a>
+    </nav>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav">
+      <a href="index.html" class="nav__logo">FLOW</a>
+      <button class="nav__burger" id="menuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+        <img src="icons/hamburger.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CLUBS HERO -->
+    <section class="clubs-hero">
+      <img src="images/clubs-hero.png" alt="Фитнес-клуб с FLOW станцией" class="clubs-hero__img" width="402" height="687">
+      <div class="clubs-hero__overlay"></div>
+      <div class="clubs-hero__body">
+        <h1 class="clubs-hero__title">Преврати расходы в новый источник дохода</h1>
+        <p class="clubs-hero__sub">Установим умную станцию спортивной воды FLOW абсолютно бесплатно</p>
+      </div>
+    </section>
+
+    <!-- CALCULATOR FOR CLUBS -->
+    <section class="clubs-calc fade-in">
+      <h2 class="section-title">Рассчитай свою выгоду</h2>
+      <div class="calc-card">
+        <div class="calc-slider-wrap">
+          <div class="calc-slider-row">
+            <span class="calc-label">Активные резиденты</span>
+            <span class="calc-count" id="residentsValue">2&nbsp;000</span>
+          </div>
+          <input type="range" class="calc-slider" id="residentsSlider" min="100" max="5000" value="2000" step="100" aria-label="Активные резиденты клуба">
+        </div>
+        <div class="calc-rows">
+          <div class="calc-row calc-row--bottles">
+            <div class="calc-row__meta">
+              <span class="calc-row__name">Сокращение издержек</span>
+              <span class="calc-row__desc">Вода, стаканы, кулер</span>
+            </div>
+            <div class="calc-row__price" id="clubSavings">44&nbsp;000&nbsp;₽</div>
+          </div>
+          <div class="calc-row calc-row--flow">
+            <div class="calc-row__meta">
+              <span class="calc-row__name">Прибыль с подписок</span>
+              <span class="calc-row__desc">Доля клуба 20%</span>
+            </div>
+            <div class="calc-row__price" id="clubProfit">19&nbsp;960&nbsp;₽</div>
+          </div>
+        </div>
+        <div class="calc-savings">
+          <span class="calc-savings__label">Выгода в месяц</span>
+          <span class="calc-savings__value" id="clubTotal">63&nbsp;960&nbsp;₽</span>
+        </div>
+      </div>
+      <p class="clubs-calc__note">Экономия базируется на средних расходах фитнес-клуба. Расчёт основан на средней конверсии 10%</p>
+    </section>
+
+    <!-- AUTONOMY (chips + card) -->
+    <section class="autonomy fade-in">
+      <h2 class="section-title">Абсолютная автономность</h2>
+
+      <div
+        class="chips"
+        data-chips="autonomyCard"
+        role="group"
+        aria-label="Категории автономности"
+      >
+        <button
+          class="chip chip--active"
+          data-value="install"
+          data-title="Простая установка"
+          data-text="Бесплатно установим станцию FLOW. Нужна только розетка и 1 м²"
+          data-img="images/clubs-hero.png"
+        >Установка</button>
+        <button
+          class="chip"
+          data-value="payments"
+          data-title="Ежемесячные выплаты"
+          data-text="Получайте 20% с каждой подписки клиентов автоматически"
+          data-img="images/clubs-hero.png"
+        >Выплаты</button>
+        <button
+          class="chip"
+          data-value="service"
+          data-title="Полное обслуживание"
+          data-text="Мы берём на себя всё: заправку, чистку, техническое обслуживание"
+          data-img="images/clubs-hero.png"
+        >Обслуживание</button>
+        <button
+          class="chip"
+          data-value="water"
+          data-title="Фильтрованная вода"
+          data-text="Система фильтрации встроена в станцию, вам не нужно закупать воду"
+          data-img="images/clubs-hero.png"
+        >Вода</button>
+        <button
+          class="chip"
+          data-value="cups"
+          data-title="Без стаканов"
+          data-text="Клиенты используют свои шейкеры и бутылки, экономя на расходниках"
+          data-img="images/clubs-hero.png"
+        >Стаканы</button>
+      </div>
+
+      <div class="autonomy__card" id="autonomyCard">
+        <img src="images/clubs-hero.png" alt="Станция FLOW в клубе" class="autonomy__img" width="362" height="220" data-chip-img>
+        <div class="autonomy__info">
+          <h3 class="autonomy__info-title" data-chip-title>Простая установка</h3>
+          <p class="autonomy__info-text" data-chip-text>Бесплатно установим станцию FLOW. Нужна только розетка и 1 м²</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLUBS CARDS CAROUSEL -->
+    <section class="clubs-cards fade-in">
+      <div class="container">
+        <h2 class="section-title">Повышаем статус клуба и удерживаем клиентов</h2>
+      </div>
+      <div class="benefits__scroll" id="clubsScroll" style="margin-top:24px">
+        <div class="benefits__track">
+          <article class="bcard">
+            <img src="images/club-card-1.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Премиальная эстетика</h3>
+              <p class="bcard__text">Станция в стиле Dark Premium выглядит дорого и органично подчёркивает уровень фитнес-клуба</p>
+            </div>
+          </article>
+          <article class="bcard">
+            <img src="images/club-card-2.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Удержание клиентов</h3>
+              <p class="bcard__text">Эксклюзивный уровень комфорта привязывает аудиторию к клубу</p>
+            </div>
+          </article>
+          <article class="bcard">
+            <img src="images/club-card-3.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Персонализация напитка</h3>
+              <p class="bcard__text">Настройка в пару кликов: вкус, насыщенность, температура и газация</p>
+            </div>
+          </article>
+          <article class="bcard">
+            <img src="images/club-card-4.png" alt="" class="bcard__bg" width="340" height="480">
+            <div class="bcard__body">
+              <h3 class="bcard__title">Уникальный опыт</h3>
+              <p class="bcard__text">Управление через смартфон вовлекает и формирует привычку</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="dots" id="clubsDots" role="tablist" aria-label="Карточки преимуществ клубов">
+        <button class="dot dot--active" data-index="0" role="tab" aria-label="Слайд 1" aria-selected="true"></button>
+        <button class="dot" data-index="1" role="tab" aria-label="Слайд 2" aria-selected="false"></button>
+        <button class="dot" data-index="2" role="tab" aria-label="Слайд 3" aria-selected="false"></button>
+        <button class="dot" data-index="3" role="tab" aria-label="Слайд 4" aria-selected="false"></button>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="clubs-contact fade-in">
+      <div class="glow-blob" style="bottom: 60px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%);"></div>
+      <h2 class="clubs-contact__title">Начни зарабатывать на питьевой зоне</h2>
+      <div class="clubs-contact__card">
+        <p class="clubs-contact__desc">
+          Мы свяжемся с вами, чтобы ответить на вопросы, зафиксировать условия партнёрства и запланировать бесплатный монтаж
+        </p>
+        <form class="form" onsubmit="return false">
+          <div class="form-field">
+            <img src="icons/user.svg" class="form-field__icon" width="20" height="20" alt="">
+            <input type="text" placeholder="Имя" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <img src="icons/phone.svg" class="form-field__icon" width="20" height="20" alt="">
+            <input type="tel" placeholder="+7 ___ ___ __ __" autocomplete="tel">
+          </div>
+          <button type="submit" class="form__submit">Обсудить установку</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

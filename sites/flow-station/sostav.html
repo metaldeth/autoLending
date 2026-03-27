@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOW — Состав и вкусы</title>
+  <meta name="description" content="Чистый вкус фруктов и быстрое восстановление. Витамины группы B, без сахара и калорий.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- MENU OVERLAY -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__header">
+      <span class="menu__logo">FLOW</span>
+      <button class="menu__close" id="menuClose" aria-label="Закрыть меню">
+        <img src="icons/close.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+    <nav class="menu__nav">
+      <a href="index.html"       class="menu__link">КАК ЭТО РАБОТАЕТ</a>
+      <a href="sostav.html"      class="menu__link menu__link--active">СОСТАВ</a>
+      <a href="podpiska.html"    class="menu__link">ПОДПИСКА</a>
+      <a href="dlya-klubov.html" class="menu__link menu__link--muted">ДЛЯ КЛУБОВ</a>
+      <a href="o-flow.html"      class="menu__link menu__link--muted">О FLOW</a>
+    </nav>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav">
+      <a href="index.html" class="nav__logo">FLOW</a>
+      <button class="nav__burger" id="menuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+        <img src="icons/hamburger.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INGREDIENTS HERO -->
+    <section class="ingredients-hero">
+      <img src="images/ingredients-hero.png" alt="Лайм и лёд" class="ingredients-hero__img" width="402" height="695">
+      <div class="ingredients-hero__overlay"></div>
+      <div class="ingredients-hero__body">
+        <h1 class="ingredients-hero__title">Вкусы и<br>ингредиенты</h1>
+        <p class="ingredients-hero__sub">Чистый вкус фруктов и быстрое восстановление. Выбор тех, кто берёт максимум от каждой тренировки</p>
+      </div>
+    </section>
+
+    <!-- FLAVORS CAROUSEL -->
+    <section class="flavors fade-in">
+      <div class="container">
+        <h2 class="section-title">Выбери свой уникальный вкус</h2>
+      </div>
+      <div class="flavors__scroll">
+        <div class="flavors__track">
+          <div class="flavor-item flavor-item--side">
+            <img src="images/flavor-1.png" alt="Вкус 1" width="330" height="171">
+          </div>
+          <div class="flavor-item flavor-item--center">
+            <img src="images/flavor-2.png" alt="Вкус 2" width="330" height="181">
+          </div>
+          <div class="flavor-item flavor-item--side">
+            <img src="images/flavor-3.png" alt="Вкус 3" width="330" height="171">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUTRITION -->
+    <section class="nutrition fade-in">
+      <div class="nutrition__card">
+        <h2 class="nutrition__title">Пищевая ценность</h2>
+
+        <!-- Tabs -->
+        <div class="tabs">
+          <button class="tab tab--active" data-tab="panel-300">300 мл</button>
+          <button class="tab" data-tab="panel-700">700 мл</button>
+        </div>
+
+        <!-- 300ml panel -->
+        <div id="panel-300" class="tab-panel">
+          <div class="nutrition__row">
+            <span class="nutrition__name">Калории</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">3 ккал</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Белки</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0 г</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Жиры</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0 г</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Углеводы</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0,7 г</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Сахар</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0 г</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B1</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0,3 мг</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B3</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">5,4 мг</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B5</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">2,1 мг</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B6</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0,6 мг</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B7</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">17,1 мкг</span>
+          </div>
+        </div>
+
+        <!-- 700ml panel -->
+        <div id="panel-700" class="tab-panel" style="display:none">
+          <div class="nutrition__row">
+            <span class="nutrition__name">Калории</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">7 ккал</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Белки</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0 г</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Жиры</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0 г</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Углеводы</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">1,6 г</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Сахар</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0 г</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B1</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">0,7 мг</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B3</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">12,6 мг</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B5</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">4,9 мг</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B6</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">1,4 мг</span>
+          </div>
+          <div class="nutrition__row">
+            <span class="nutrition__name">Витамин B7</span>
+            <span class="nutrition__dots"></span>
+            <span class="nutrition__value">40 мкг</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION -->
+    <section class="accordion fade-in">
+      <div class="accordion__card">
+        <div class="accordion__item">
+          <button class="accordion__header" aria-expanded="false">
+            <span class="accordion__header-title">Состав</span>
+            <img src="icons/arrow-down.svg" class="accordion__arrow" width="24" height="24" alt="">
+          </button>
+          <div class="accordion__body">
+            <div class="accordion__body-inner">
+              Вода питьевая очищенная, витамины группы B: тиамин (B1), ниацин (B3), пантотеновая кислота (B5), пиридоксин (B6), биотин (B7). Натуральные ароматизаторы. Подсластитель — стевиозид (экстракт стевии). Регулятор кислотности — лимонная кислота.
+            </div>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__header" aria-expanded="false">
+            <span class="accordion__header-title">Рекомендация</span>
+            <img src="icons/arrow-down.svg" class="accordion__arrow" width="24" height="24" alt="">
+          </button>
+          <div class="accordion__body">
+            <div class="accordion__body-inner">
+              Рекомендуемая суточная доза — 300–700 мл. Употреблять во время или после тренировки. Не является лекарственным средством. Не превышайте рекомендованное количество. Перед применением при наличии хронических заболеваний проконсультируйтесь с врачом.
+            </div>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__header" aria-expanded="false">
+            <span class="accordion__header-title">Информация</span>
+            <img src="icons/arrow-down.svg" class="accordion__arrow" width="24" height="24" alt="">
+          </button>
+          <div class="accordion__body">
+            <div class="accordion__body-inner">
+              Хранить при температуре от +2°C до +8°C. После вскрытия употребить в течение 24 часов. Срок годности готового напитка — 12 месяцев с даты производства концентрата. Беречь от прямых солнечных лучей.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

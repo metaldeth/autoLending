@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOW — О нас</title>
+  <meta name="description" content="Умная станция напитков для фитнес-клубов. Идея, результат и польза для всех.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- MENU OVERLAY -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__header">
+      <span class="menu__logo">FLOW</span>
+      <button class="menu__close" id="menuClose" aria-label="Закрыть меню">
+        <img src="icons/close.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+    <nav class="menu__nav">
+      <a href="index.html"       class="menu__link">КАК ЭТО РАБОТАЕТ</a>
+      <a href="sostav.html"      class="menu__link">СОСТАВ</a>
+      <a href="podpiska.html"    class="menu__link">ПОДПИСКА</a>
+      <a href="dlya-klubov.html" class="menu__link menu__link--muted">ДЛЯ КЛУБОВ</a>
+      <a href="o-flow.html"      class="menu__link menu__link--active">О FLOW</a>
+    </nav>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav">
+      <a href="index.html" class="nav__logo">FLOW</a>
+      <button class="nav__burger" id="menuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+        <img src="icons/hamburger.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+      <img src="images/about-hero.png" alt="Умная станция FLOW" class="about-hero__img" width="402" height="827">
+      <div class="about-hero__overlay"></div>
+      <div class="about-hero__body">
+        <h1 class="about-hero__title">Умная станция напитков для фитнес-клубов</h1>
+        <div class="about-hero__cards">
+          <div class="about-hero__card">
+            <h2 class="about-hero__card-title">Идея</h2>
+            <p class="about-hero__card-text">Мы хотели сделать так, чтобы клиенты получали вкусные и полезные спортивные напитки, а владельцы не тратили время и деньги на обслуживание кулера</p>
+          </div>
+          <div class="about-hero__card">
+            <h2 class="about-hero__card-title">Результат</h2>
+            <p class="about-hero__card-text">Автономная станция, которая радует посетителей и приносит прибыль клубу</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFIT TABS -->
+    <section class="about-benefit fade-in">
+      <h2 class="section-title">Абсолютная польза для всех</h2>
+
+      <div
+        class="chips"
+        data-chips="aboutBenefitCard"
+        role="group"
+        aria-label="Категории пользы"
+        style="margin-bottom:16px"
+      >
+        <button
+          class="chip chip--active"
+          data-value="clients"
+          data-title="Для клиентов"
+          data-text="Бесплатная чистая вода и полезные спортивные напитки с разными вкусами. Оплатить можно разово или оформить подписку на месяц"
+          data-img="images/about-card.png"
+        >Клиенты</button>
+        <button
+          class="chip"
+          data-value="business"
+          data-title="Для бизнеса"
+          data-text="Клуб получает дополнительный источник дохода без капитальных вложений. Мы берём на себя все операционные расходы"
+          data-img="images/about-card.png"
+        >Бизнес</button>
+        <button
+          class="chip"
+          data-value="ecology"
+          data-title="Для экологии"
+          data-text="Каждый клиент с шейкером — это сэкономленные пластиковые бутылки. Вместе делаем спорт более экологичным"
+          data-img="images/about-card.png"
+        >Экология</button>
+      </div>
+
+      <div class="about-benefit__card" id="aboutBenefitCard">
+        <img src="images/about-card.png" alt="Польза FLOW" class="about-benefit__img" width="362" height="220" data-chip-img>
+        <div class="about-benefit__info">
+          <h3 class="about-benefit__info-title" data-chip-title>Для клиентов</h3>
+          <p class="about-benefit__info-text" data-chip-text>Бесплатная чистая вода и полезные спортивные напитки с разными вкусами. Оплатить можно разово или оформить подписку на месяц</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLOGAN -->
+    <section class="about-slogan fade-in">
+      <p class="about-slogan__text">СОХРАНИМ<br>ПРИРОДУ<br>ВМЕСТЕ</p>
+    </section>
+
+  </main>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

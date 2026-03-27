@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOW — Подписка от 499 ₽</title>
+  <meta name="description" content="Ежедневный литр витаминного напитка за 499 ₽ в месяц. Без сахара, без лишнего пластика.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- MENU OVERLAY -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__header">
+      <span class="menu__logo">FLOW</span>
+      <button class="menu__close" id="menuClose" aria-label="Закрыть меню">
+        <img src="icons/close.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+    <nav class="menu__nav">
+      <a href="index.html"       class="menu__link">КАК ЭТО РАБОТАЕТ</a>
+      <a href="sostav.html"      class="menu__link">СОСТАВ</a>
+      <a href="podpiska.html"    class="menu__link menu__link--active">ПОДПИСКА</a>
+      <a href="dlya-klubov.html" class="menu__link menu__link--muted">ДЛЯ КЛУБОВ</a>
+      <a href="o-flow.html"      class="menu__link menu__link--muted">О FLOW</a>
+    </nav>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav">
+      <a href="index.html" class="nav__logo">FLOW</a>
+      <button class="nav__burger" id="menuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+        <img src="icons/hamburger.svg" width="24" height="24" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main class="has-cta-bar">
+
+    <!-- HERO TEXT -->
+    <section class="subscription-hero">
+      <h1 class="subscription-hero__title">Выгодная подписка</h1>
+      <p class="subscription-hero__sub">Твой ежедневный запас энергии для эффективных тренировок</p>
+    </section>
+
+    <!-- BENEFIT LIST -->
+    <section class="benefit-list fade-in">
+
+      <div class="benefit-item">
+        <div class="benefit-item__icon-wrap">
+          <img src="icons/drop-subs.svg" width="24" height="24" alt="">
+        </div>
+        <div class="benefit-item__text">
+          <span class="benefit-item__title">1 литр напитка каждый день</span>
+          <span class="benefit-item__desc">Лимит обновляется в 00:00</span>
+        </div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-item__icon-wrap">
+          <img src="icons/flash.svg" width="24" height="24" alt="">
+        </div>
+        <div class="benefit-item__text">
+          <span class="benefit-item__title">Витамины группы B</span>
+          <span class="benefit-item__desc">Для высокой концентрации на протяжении всей тренировки</span>
+        </div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-item__icon-wrap">
+          <img src="icons/no-sugar.svg" width="24" height="24" alt="">
+        </div>
+        <div class="benefit-item__text">
+          <span class="benefit-item__title">Без сахара и калорий</span>
+          <span class="benefit-item__desc">Максимум пользы для поддержания идеальной формы</span>
+        </div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-item__icon-wrap">
+          <img src="icons/heart.svg" width="24" height="24" alt="">
+        </div>
+        <div class="benefit-item__text">
+          <span class="benefit-item__title">Натуральный вкус</span>
+          <span class="benefit-item__desc">Без красителей, глютена и искусственных ароматизаторов</span>
+        </div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-item__icon-wrap">
+          <img src="icons/gem.svg" width="24" height="24" alt="">
+        </div>
+        <div class="benefit-item__text">
+          <span class="benefit-item__title">Минеральный баланс</span>
+          <span class="benefit-item__desc">Магний, калий и натрий для максимальной выносливости</span>
+        </div>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-item__icon-wrap">
+          <img src="icons/planet.svg" width="24" height="24" alt="">
+        </div>
+        <div class="benefit-item__text">
+          <span class="benefit-item__title">Забота об экологии</span>
+          <span class="benefit-item__desc">Наполняй свой шейкер и тренируйся без лишнего пластика</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- CTA BAR -->
+  <div class="cta-bar">
+    <button class="btn-primary">Оформить за 499 ₽</button>
+  </div>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
