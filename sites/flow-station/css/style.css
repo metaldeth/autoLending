@@ -434,14 +434,23 @@ button {
   flex-shrink: 0;
 }
 
-.badge--tr { top: 8px;    right: 16px; }
-.badge--ml { top: 200px;  left: 4px; }
-.badge--mr { top: 260px;  right: 4px; }
+.badge--tr {
+  top: 6px;
+  left: calc(50% + 10px);
+}
+.badge--ml {
+  top: 202px;
+  right: calc(50% + 10px);
+}
+.badge--mr {
+  top: 268px;
+  left: calc(50% - 10px);
+}
 .badge--bc {
-  bottom: 100px;
+  top: 370px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-60%);
+  transform: translateX(-60%);
 }
 
 /* ========================================================
@@ -1728,11 +1737,10 @@ button {
     width: 300px;
   }
 
-  /* Badges — hug device (image 300px → half 150px) */
-  .badge--tr { top: 10px;  left: calc(50% + 62px);  right: auto; }
-  .badge--ml { top: 200px; left: calc(50% - 218px); }
-  .badge--mr { top: 260px; left: calc(50% + 126px); right: auto; }
-  .badge--bc { bottom: 108px; }
+  .badge--tr { top: 8px;   left: calc(50% + 20px); }
+  .badge--ml { top: 220px; right: calc(50% + 20px); }
+  .badge--mr { top: 290px; left: calc(50% - 4px); }
+  .badge--bc { top: 420px; }
 
   /* Calculator */
   .calc-section {
@@ -1905,11 +1913,10 @@ button {
     width: 340px;
   }
 
-  /* Badges — hug device (image 340px → half 170px) */
-  .badge--tr { top: 18px;  left: calc(50% + 78px);  right: auto; }
-  .badge--ml { top: 205px; left: calc(50% - 268px); }
-  .badge--mr { top: 272px; left: calc(50% + 138px); right: auto; }
-  .badge--bc { bottom: 118px; }
+  .badge--tr { top: 18px;  left: calc(50% + 30px); }
+  .badge--ml { top: 230px; right: calc(50% + 30px); }
+  .badge--mr { top: 300px; left: calc(50% - 4px); }
+  .badge--bc { top: 460px; }
 
   /* Flavors — all 3 cards fit (3×330+2×16=1022px ≤ 1100px), center them */
   .flavors {
