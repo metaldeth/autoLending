@@ -35,7 +35,10 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* Единственный горизонтальный клип на корне — иначе при overflow-x на body/.page-wrap
+     по спецификации overflow-y становится auto и появляется второй вертикальный скроллбар. */
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -44,7 +47,9 @@ body {
   background: var(--bg);
   color: var(--text-white);
   line-height: 1.4;
-  overflow-x: hidden;
+  overflow: visible;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -67,14 +72,14 @@ button {
 }
 
 /* ---- Layout wrapper ---- */
-/* overflow-x: hidden forces overflow-y to compute to auto (CSS overflow spec),
-   which creates a second vertical scrollbar on wide layouts — use clip + visible. */
+/* Не задавать overflow-x на этом блоке: при clip/hidden + visible по оси Y браузер
+   вычисляет overflow-y: auto — получается вложенная прокрутка рядом со скроллом html.
+   Горизонтальный клип только на html. */
 .page-wrap {
   max-width: 402px;
   margin: 0 auto;
   position: relative;
-  overflow-x: clip;
-  overflow-y: visible;
+  overflow: visible;
   min-height: 100vh;
   background: var(--bg);
 }
@@ -126,6 +131,7 @@ button {
   opacity: 1;
   pointer-events: auto;
 }
+
 
 .menu__header {
   display: -webkit-flex;
@@ -432,10 +438,10 @@ button {
 .badge--ml { top: 200px;  left: 4px; }
 .badge--mr { top: 260px;  right: 4px; }
 .badge--bc {
-  bottom: 80px;
+  bottom: 100px;
   left: 50%;
-  -webkit-transform: translateX(-55%);
-  transform: translateX(-55%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 /* ========================================================
@@ -547,14 +553,19 @@ button {
   text-align: right;
 }
 
-/* Custom range */
+/* Custom range — input taller than track so WebKit centers thumb on track */
 .calc-slider {
+  --calc-slider-pct: 0%;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+  display: block;
   width: 100%;
-  height: 6px;
-  background: rgba(127, 90, 240, 0.3);
-  border-radius: 3px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
   outline: none;
   cursor: pointer;
 }
@@ -564,6 +575,8 @@ button {
   appearance: none;
   width: 24px;
   height: 24px;
+  /* WebKit: thumb sits low vs 6px track; pull up to align centers */
+  margin-top: -9px;
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 4px rgba(127, 90, 240, 0.25);
@@ -585,6 +598,24 @@ button {
 .calc-slider::-webkit-slider-runnable-track {
   height: 6px;
   border-radius: 3px;
+  background: rgba(127, 90, 240, 0.3);
+  background: linear-gradient(
+    to right,
+    var(--accent) var(--calc-slider-pct),
+    rgba(127, 90, 240, 0.3) var(--calc-slider-pct)
+  );
+}
+
+.calc-slider::-moz-range-track {
+  height: 6px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(127, 90, 240, 0.3);
+  background: linear-gradient(
+    to right,
+    var(--accent) var(--calc-slider-pct),
+    rgba(127, 90, 240, 0.3) var(--calc-slider-pct)
+  );
 }
 
 .calc-rows {
@@ -1449,11 +1480,11 @@ button {
   bottom: 0;
   left: 0;
   background:
-    -webkit-linear-gradient(bottom, var(--bg) 0%, transparent 30%),
-    -webkit-linear-gradient(top, rgba(18,18,18,0.5) 0%, transparent 40%);
+    -webkit-linear-gradient(bottom, var(--bg) 0%, transparent 25%),
+    -webkit-linear-gradient(top, rgba(18,18,18,0.25) 0%, transparent 30%);
   background:
-    linear-gradient(to top, var(--bg) 0%, transparent 30%),
-    linear-gradient(to bottom, rgba(18,18,18,0.5) 0%, transparent 40%);
+    linear-gradient(to top, var(--bg) 0%, transparent 25%),
+    linear-gradient(to bottom, rgba(18,18,18,0.25) 0%, transparent 30%);
 }
 
 .about-hero__body {
@@ -1488,7 +1519,7 @@ button {
 }
 
 .about-hero__card {
-  background: rgba(38, 38, 38, 0.75);
+  background: rgba(38, 38, 38, 0.9);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-radius: var(--radius-card);
@@ -1496,16 +1527,16 @@ button {
 }
 
 .about-hero__card-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--text-white);
   margin-bottom: 8px;
 }
 
 .about-hero__card-text {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.375;
   color: var(--text-gray);
 }
 
@@ -1518,6 +1549,13 @@ button {
   margin-bottom: 24px;
 }
 
+/* Chip overrides specifically for about-benefit (Figma 246:12139) */
+.about-benefit .chip {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
 .about-benefit__card {
   background: var(--bg-card2);
   border-radius: var(--radius-card);
@@ -1526,8 +1564,9 @@ button {
 
 .about-benefit__img {
   width: 100%;
-  height: 220px;
+  height: 361px;
   object-fit: cover;
+  object-position: center 20%;
 }
 
 .about-benefit__info {
@@ -1536,16 +1575,16 @@ button {
 }
 
 .about-benefit__info-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--text-white);
   margin-bottom: 8px;
 }
 
 .about-benefit__info-text {
-  font-size: 16px;
-  color: var(--text-gray);
-  line-height: 1.5;
+  font-size: 18px;
+  color: #bfbfbf;
+  line-height: 1.33;
 }
 
 /* Slogan section */
@@ -1555,8 +1594,8 @@ button {
 
 .about-slogan__text {
   font-size: 44px;
-  font-weight: 700;
-  line-height: 1.1;
+  font-weight: 600;
+  line-height: 1.2;
   color: var(--text-white);
   letter-spacing: -0.02em;
 }
@@ -1602,11 +1641,8 @@ button {
     transform: translateX(-50%);
   }
 
-  .menu {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
+  /* Menu stays full-viewport: left:0 right:0 are the base styles.
+     Content inside (.menu__header, .menu__nav) is centered via max-width + margin:auto. */
 
   .cta-bar {
     left: 50%;
@@ -1692,10 +1728,11 @@ button {
     width: 300px;
   }
 
-  /* Badges — anchored to image center (image: 300px, center: 50%) */
-  .badge--tr { top: 8px;   left: calc(50% + 80px);  right: auto; }
-  .badge--ml { top: 200px; left: calc(50% - 260px); }
-  .badge--mr { top: 260px; left: calc(50% + 154px); right: auto; }
+  /* Badges — hug device (image 300px → half 150px) */
+  .badge--tr { top: 10px;  left: calc(50% + 62px);  right: auto; }
+  .badge--ml { top: 200px; left: calc(50% - 218px); }
+  .badge--mr { top: 260px; left: calc(50% + 126px); right: auto; }
+  .badge--bc { bottom: 108px; }
 
   /* Calculator */
   .calc-section {
@@ -1750,6 +1787,39 @@ button {
   .btn-primary {
     max-width: 400px;
     margin: 0 auto;
+  }
+
+  /* О FLOW — About Hero tablet */
+  .about-hero {
+    height: 900px;
+  }
+
+  .about-hero__title {
+    font-size: 52px;
+  }
+
+  .about-hero__body {
+    padding: calc(var(--header-h) + 32px) 40px 48px;
+  }
+
+  /* О FLOW — Benefits tablet */
+  .about-benefit {
+    padding: 72px 40px 0;
+  }
+
+  .about-benefit__card {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* О FLOW — Slogan tablet */
+  .about-slogan {
+    padding: 80px 40px 100px;
+  }
+
+  .about-slogan__text {
+    font-size: 56px;
   }
 }
 
@@ -1835,11 +1905,11 @@ button {
     width: 340px;
   }
 
-  /* Badges — anchored to image center (image: 340px, center: 50%) */
-  .badge--tr { top: 30px;  left: calc(50% + 100px); right: auto; }
-  .badge--ml { top: 210px; left: calc(50% - 310px); }
-  .badge--mr { top: 280px; left: calc(50% + 174px); right: auto; }
-  .badge--bc { bottom: 90px; }
+  /* Badges — hug device (image 340px → half 170px) */
+  .badge--tr { top: 18px;  left: calc(50% + 78px);  right: auto; }
+  .badge--ml { top: 205px; left: calc(50% - 268px); }
+  .badge--mr { top: 272px; left: calc(50% + 138px); right: auto; }
+  .badge--bc { bottom: 118px; }
 
   /* Flavors — all 3 cards fit (3×330+2×16=1022px ≤ 1100px), center them */
   .flavors {
@@ -1933,5 +2003,38 @@ button {
     max-width: 480px;
     font-size: 20px;
     height: 64px;
+  }
+
+  /* О FLOW — About Hero desktop */
+  .about-hero {
+    height: 960px;
+  }
+
+  .about-hero__title {
+    font-size: 60px;
+  }
+
+  .about-hero__body {
+    padding: calc(var(--header-h) + 48px) 60px 60px;
+  }
+
+  /* О FLOW — Benefits desktop */
+  .about-benefit {
+    padding: 80px 60px 0;
+  }
+
+  .about-benefit__card {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* О FLOW — Slogan desktop */
+  .about-slogan {
+    padding: 100px 60px 120px;
+  }
+
+  .about-slogan__text {
+    font-size: 72px;
   }
 }

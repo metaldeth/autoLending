@@ -17,6 +17,7 @@
     lockBodyScroll();
     menu.classList.add('is-open');
     menu.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('menu-is-open');
   }
 
   function closeMenu() {
@@ -25,6 +26,7 @@
     menu.classList.remove('is-open');
     menu.setAttribute('aria-hidden', 'true');
     unlockBodyScroll();
+    document.body.classList.remove('menu-is-open');
   }
 
   function lockBodyScroll() {
@@ -126,8 +128,9 @@
     var val = parseFloat(slider.value) || 0;
     var pct = ((val - min) / (max - min)) * 100;
 
-    slider.style.background =
-      'linear-gradient(to right, #7f5af0 ' + pct + '%, rgba(127,90,240,0.3) ' + pct + '%)';
+    /* Drop legacy inline fill (old main.js); track uses --calc-slider-pct in CSS */
+    slider.style.removeProperty('background');
+    slider.style.setProperty('--calc-slider-pct', pct + '%');
   }
 
   /* --------------------------------------------------------

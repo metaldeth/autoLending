@@ -50,6 +50,10 @@ def main():
     # Files/dirs to upload — общий набор для типичного лендинга. Для другого набора правь здесь или делай отдельный скрипт под сайт.
     DEPLOY_FILES = [
         "index.html",
+        "o-flow.html",
+        "podpiska.html",
+        "sostav.html",
+        "dlya-klubov.html",
         "photo.png",
         "resume.pdf",
         "favicon.ico",
@@ -61,7 +65,7 @@ def main():
         "site.webmanifest",
         "og-image.png",
     ]
-    DEPLOY_DIRS = ["css", "js", "images"]
+    DEPLOY_DIRS = ["css", "js", "images", "img", "icons"]
 
     # ── SFTP helpers ────────────────────────────────────────────────────────────
 
