@@ -1071,7 +1071,8 @@ img, svg {
 }
 
 .arch__step-sub {
-  font-size: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
   line-height: 1.55;
   color: var(--text-2);
 }

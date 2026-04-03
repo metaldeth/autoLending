@@ -18,6 +18,17 @@
     if (loaderFill) loaderFill.style.width = rounded + '%';
   }, 40);
 
+  function loadHeroScene() {
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js';
+    s.onload = function () {
+      var h = document.createElement('script');
+      h.src = 'js/hero.js';
+      document.head.appendChild(h);
+    };
+    document.head.appendChild(s);
+  }
+
   function finishLoader() {
     if (loaderDone) return;
     loaderDone = true;
@@ -28,6 +39,8 @@
       if (loader) loader.classList.add('hidden');
       startHeroCounters();
       startHeroRoleTypewriter();
+      /* Three.js + hero canvas load AFTER loader hides — never blocks main thread */
+      setTimeout(loadHeroScene, 200);
     }, 420);
   }
 
