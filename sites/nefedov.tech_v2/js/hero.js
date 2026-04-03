@@ -9,6 +9,7 @@
   var canvas = document.getElementById('heroCanvas');
   if (!canvas || typeof THREE === 'undefined') return;
 
+  try {
   var isMobile = window.innerWidth < 768;
   var PARTICLE_COUNT     = isMobile ? 55  : 110;
   var CONNECT_THRESHOLD  = isMobile ? 85  : 115;
@@ -142,5 +143,10 @@
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
+
+  } catch (e) {
+    /* WebGL or Three can throw on some Safari builds — must not break the page */
+    if (typeof console !== 'undefined' && console.warn) console.warn('[hero]', e);
+  }
 
 }());

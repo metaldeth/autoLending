@@ -31,12 +31,16 @@
     }, 420);
   }
 
+  /* Safari: window "load" can be delayed forever if a subresource hangs; DOMContentLoaded + cap is enough for a static landing */
   if (document.readyState === 'complete') {
     setTimeout(finishLoader, 700);
+  } else if (document.readyState === 'interactive') {
+    setTimeout(finishLoader, 500);
   } else {
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(finishLoader, 500); });
     window.addEventListener('load', function () { setTimeout(finishLoader, 350); });
   }
-  setTimeout(finishLoader, 3000); /* safety fallback */
+  setTimeout(finishLoader, 2800); /* safety fallback even if load never fires */
 
   /* ================================================================
      NAV — scroll state

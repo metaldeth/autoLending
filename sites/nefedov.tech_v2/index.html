@@ -374,9 +374,10 @@
   </footer>
 
   <!-- Scripts: Three.js must load before hero.js -->
+  <!-- main.js first: Safari must not block on Three/WebGL before loader + UI init -->
+  <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
   <script src="js/hero.js"></script>
-  <script src="js/main.js"></script>
 
 </body>
 
