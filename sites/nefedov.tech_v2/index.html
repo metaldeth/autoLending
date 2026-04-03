@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleksandr Nefedov — Engineering Lead · AI Automation</title>
+
+  <!-- SEO / OG -->
+  <meta name="description" content="Engineering Lead, строю AI-first инженерные процессы. AI Product Factory — автономный dev pipeline для 16+ репозиториев Shaker.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nefedov.tech/">
+  <meta property="og:title" content="Aleksandr Nefedov — Engineering Lead · AI Automation">
+  <meta property="og:description" content="Строю системы, которые пишут код. Autonomous agent pipeline от задачи в канбане до git push.">
+  <meta property="og:image" content="https://nefedov.tech/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- BUILD_START: 2026-04-03 -->
+</head>
+
+<body>
+
+  <!-- ================================================================
+       LOADER
+  ================================================================ -->
+  <div class="loader" id="loader">
+    <div class="loader__logo">AN</div>
+    <div class="loader__progress">
+      <div class="loader__bar">
+        <div class="loader__bar-fill" id="loaderFill"></div>
+      </div>
+      <div class="loader__count">
+        <span id="loaderNum">0</span><span class="loader__pct">%</span>
+      </div>
+    </div>
+    <div class="loader__label">NEFEDOV.TECH · INITIALIZING</div>
+  </div>
+
+  <!-- ================================================================
+       NAV
+  ================================================================ -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo" aria-label="На главную">
+      <span class="nav__logo-box">AN</span>
+      <span class="nav__logo-name">NEFEDOV.TECH</span>
+    </a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="#about" class="nav__link">О СЕБЕ</a></li>
+      <li><a href="#platform" class="nav__link">СХЕМА</a></li>
+      <li><a href="#cta" class="nav__link">КОНТАКТ</a></li>
+    </ul>
+
+    <div class="nav__right">
+      <a href="#cta" class="nav__cta">КОНТАКТ</a>
+      <button class="nav__burger" id="navBurger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================================================================
+       MOBILE MENU
+  ================================================================ -->
+  <div class="mmenu" id="mobileMenu" aria-hidden="true">
+    <div class="mmenu__header">
+      <span class="mmenu__logo">AN · NEFEDOV.TECH</span>
+      <button class="mmenu__close" id="menuClose" aria-label="Закрыть меню">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="mmenu__nav" aria-label="Мобильная навигация">
+      <a href="#about" class="mmenu__link">О СЕБЕ</a>
+      <a href="#platform" class="mmenu__link">СХЕМА</a>
+      <a href="#cta" class="mmenu__link">КОНТАКТ</a>
+    </nav>
+    <div class="mmenu__footer">
+      <a href="https://t.me/asnefedov" target="_blank" rel="noopener noreferrer" class="mmenu__tg">
+        НАПИСАТЬ В TELEGRAM →
+      </a>
+    </div>
+  </div>
+  <div class="mmenu__backdrop" id="menuBackdrop"></div>
+
+  <!-- ================================================================
+       HERO
+  ================================================================ -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="heroCanvas"></canvas>
+
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        <span class="hero__badge-text">TEAM LEAD · SHAKER</span>
+      </div>
+
+      <h1 class="hero__name" data-text="ALEKSANDR NEFEDOV">
+        ALEKSANDR<br>NEFEDOV
+      </h1>
+
+      <p class="hero__role" id="heroRole" data-text="Fullstack Team Lead · AI Engineering">
+        <span class="hero__role-text" id="heroRoleText"></span><span class="hero__role-cursor" aria-hidden="true">|</span>
+      </p>
+
+      <p class="hero__location">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        MOSCOW · REMOTE
+      </p>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-val" data-count="5" data-suffix="+">5+</span>
+          <span class="hero__stat-key">ЛЕТ ОПЫТА</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-val" data-count="16" data-suffix="+">16+</span>
+          <span class="hero__stat-key">РЕПОЗИТОРИЕВ</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-val" data-static="3–4×">3–4×</span>
+          <span class="hero__stat-key">СКОРОСТЬ КОМАНДЫ</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-val" data-count="100" data-suffix="K+">100K+</span>
+          <span class="hero__stat-key">СТРОК ЗА СЕССИЮ</span>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#platform" class="btn btn--neon">СМОТРЕТЬ ПЛАТФОРМУ</a>
+        <a href="#cta" class="btn btn--ghost">СВЯЗАТЬСЯ</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span class="hero__scroll-label">SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       TICKER BAND
+  ================================================================ -->
+  <div class="band" aria-hidden="true">
+    <div class="band__track">
+      <span>CURSOR AGENT</span><span class="band__sep">◆</span>
+      <span>AI PRODUCT FACTORY</span><span class="band__sep">◆</span>
+      <span>TASK ROUTER</span><span class="band__sep">◆</span>
+      <span>PLANKA KANBAN</span><span class="band__sep">◆</span>
+      <span>GITLAB CI/CD</span><span class="band__sep">◆</span>
+      <span>REACT</span><span class="band__sep">◆</span>
+      <span>TYPESCRIPT</span><span class="band__sep">◆</span>
+      <span>JAVA · GO</span><span class="band__sep">◆</span>
+      <span>DOCKER</span><span class="band__sep">◆</span>
+      <span>AUTONOMOUS DEV</span><span class="band__sep">◆</span>
+      <span>MCP PROTOCOL</span><span class="band__sep">◆</span>
+      <span>SERVICE REGISTRY</span><span class="band__sep">◆</span>
+      <span>AGENTS.MD</span><span class="band__sep">◆</span>
+      <span>16+ REPOS</span><span class="band__sep">◆</span>
+      <!-- duplicate for seamless loop -->
+      <span>CURSOR AGENT</span><span class="band__sep">◆</span>
+      <span>AI PRODUCT FACTORY</span><span class="band__sep">◆</span>
+      <span>TASK ROUTER</span><span class="band__sep">◆</span>
+      <span>PLANKA KANBAN</span><span class="band__sep">◆</span>
+      <span>GITLAB CI/CD</span><span class="band__sep">◆</span>
+      <span>REACT</span><span class="band__sep">◆</span>
+      <span>TYPESCRIPT</span><span class="band__sep">◆</span>
+      <span>JAVA · GO</span><span class="band__sep">◆</span>
+      <span>DOCKER</span><span class="band__sep">◆</span>
+      <span>AUTONOMOUS DEV</span><span class="band__sep">◆</span>
+      <span>MCP PROTOCOL</span><span class="band__sep">◆</span>
+      <span>SERVICE REGISTRY</span><span class="band__sep">◆</span>
+      <span>AGENTS.MD</span><span class="band__sep">◆</span>
+      <span>16+ REPOS</span><span class="band__sep">◆</span>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       ABOUT — 01
+  ================================================================ -->
+  <section class="section about" id="about">
+    <div class="section__inner">
+      <div class="about__left reveal">
+        <span class="section-tag js-tag-type" data-text="01 / О СЕБЕ">01 / О СЕБЕ</span>
+        <h2 class="about__headline">
+          Я fullstack-разработчик,<br>который переключился<br>
+          <span class="text--neon">на автоматизацию разработки<br>с агентами.</span>
+        </h2>
+      </div>
+      <div class="about__right reveal reveal--delay-1">
+        <p class="about__p">
+          Сейчас я Team Lead в Shaker. В продукте 16+ репозиториев и несколько стеков:
+          React, TypeScript, Java, Go, Electron, Android.
+          Основной фокус — сделать разработку предсказуемой и более автономной.
+        </p>
+        <p class="about__p">
+          Я строю систему правил, контрактов и пайплайнов, где задача приходит из канбана,
+          проходит через агента, проверки и CI/CD, и возвращается с результатом обратно в карточку.
+          Это сайт-визитка, но он тоже собран таким подходом.
+        </p>
+        <div class="about__tags">
+          <span class="tag">AI Engineering</span>
+          <span class="tag">Team Lead</span>
+          <span class="tag">Agent Pipelines</span>
+          <span class="tag">Architecture</span>
+          <span class="tag">Rules Systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PLATFORM — 02 (AI PRODUCT FACTORY)
+  ================================================================ -->
+  <section class="section platform" id="platform">
+    <div class="section__inner">
+      <div class="platform__header reveal">
+        <div class="platform__header-left">
+          <span class="section-tag js-tag-type" data-text="02 / КАК РАБОТАЕТ СИСТЕМА">02 / КАК РАБОТАЕТ СИСТЕМА</span>
+          <h2 class="platform__title">Путь задачи<br>внутри системы</h2>
+        </div>
+        <div class="platform__badge">
+          <span class="platform__badge-dot"></span>
+          <span>AI PRODUCT FACTORY · SHAKER</span>
+        </div>
+      </div>
+
+      <p class="platform__desc reveal reveal--delay-1">
+        Здесь не архитектура ради архитектуры, а простой поток одной задачи.
+        Пользователь кидает карточки в Planka, worker разбирает их по одной:
+        сначала понимает, что именно нужно сделать, потом пишет код, проверяет его локально и только после этого отдаёт в git и CI/CD.
+      </p>
+
+      <div class="arch reveal reveal--delay-2" id="arch">
+        <div class="arch__diagram" id="archDiagram">
+          <div class="arch__col" data-step="0">
+            <div class="arch__step">
+              <span class="arch__step-num">01</span>
+              <span class="arch__step-name">ПОСТАНОВКА</span>
+              <span class="arch__step-sub">пользователь пишет задачу в карточку</span>
+            </div>
+          </div>
+          <div class="arch__sep" data-sep="0"><span class="arch__pulse"></span></div>
+
+          <div class="arch__col" data-step="1">
+            <div class="arch__step">
+              <span class="arch__step-num">02</span>
+              <span class="arch__step-name">ПЛАН</span>
+              <span class="arch__step-sub">агент уточняет, что менять и в каком порядке</span>
+            </div>
+          </div>
+          <div class="arch__sep" data-sep="1"><span class="arch__pulse"></span></div>
+
+          <div class="arch__col" data-step="2">
+            <div class="arch__step">
+              <span class="arch__step-num">03</span>
+              <span class="arch__step-name">ОЧЕРЕДЬ</span>
+              <span class="arch__step-sub">когда вопросов нет, задача ждёт своей очереди</span>
+            </div>
+          </div>
+          <div class="arch__sep" data-sep="2"><span class="arch__pulse"></span></div>
+
+          <div class="arch__col" data-step="3">
+            <div class="arch__step">
+              <span class="arch__step-num">04</span>
+              <span class="arch__step-name">В РАБОТЕ</span>
+              <span class="arch__step-sub">worker берёт задачу и пишет код</span>
+            </div>
+          </div>
+          <div class="arch__sep" data-sep="3"><span class="arch__pulse"></span></div>
+
+          <div class="arch__col" data-step="4">
+            <div class="arch__step">
+              <span class="arch__step-num">05</span>
+              <span class="arch__step-name">ЛОКАЛЬНАЯ ПРОВЕРКА</span>
+              <span class="arch__step-sub">деплой на локальный сервер, просмотр и проверка</span>
+            </div>
+          </div>
+          <div class="arch__sep" data-sep="4"><span class="arch__pulse"></span></div>
+
+          <div class="arch__col" data-step="5">
+            <div class="arch__step">
+              <span class="arch__step-num">06</span>
+              <span class="arch__step-name">GIT И CI/CD</span>
+              <span class="arch__step-sub">push, повторные проверки, сборка и деплой</span>
+            </div>
+          </div>
+          <div class="arch__sep" data-sep="5"><span class="arch__pulse"></span></div>
+
+          <div class="arch__col" data-step="6">
+            <div class="arch__step">
+              <span class="arch__step-num">07</span>
+              <span class="arch__step-name">ГОТОВО</span>
+              <span class="arch__step-sub">задача завершена, worker берёт следующую</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch__status" id="archStatusText">
+          пользователь ставит задачу в карточку
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CTA — 05
+  ================================================================ -->
+  <section class="section cta" id="cta">
+    <div class="section__inner">
+      <div class="cta__top reveal">
+        <span class="section-tag js-tag-type" data-text="03 / КОНТАКТ">03 / КОНТАКТ</span>
+        <div class="cta__status">
+          <span class="cta__status-dot"></span>
+          <span>OPEN TO CONVERSATION</span>
+        </div>
+      </div>
+
+      <h2 class="cta__headline reveal reveal--delay-1">
+        Если интересно, как это устроено<br>
+        внутри команды и процесса,<br>
+        <span class="text--neon">можно просто написать.</span>
+      </h2>
+
+      <div class="cta__contacts reveal reveal--delay-2">
+        <div class="cta__contact">
+          <span class="cta__contact-label">TELEGRAM</span>
+          <a href="https://t.me/asnefedov" target="_blank" rel="noopener noreferrer" class="cta__contact-val">@asnefedov</a>
+        </div>
+        <div class="cta__contact">
+          <span class="cta__contact-label">EMAIL</span>
+          <a href="mailto:nefedovaleksandr196@gmail.com" class="cta__contact-val">nefedovaleksandr196@gmail.com</a>
+        </div>
+        <div class="cta__contact">
+          <span class="cta__contact-label">FORMAT</span>
+          <span class="cta__contact-val">Remote Only</span>
+        </div>
+      </div>
+
+      <a href="https://t.me/asnefedov" target="_blank" rel="noopener noreferrer"
+        class="btn btn--neon cta__btn reveal reveal--delay-3">
+        НАПИСАТЬ В TELEGRAM
+      </a>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer class="footer">
+    <span class="footer__left">ALEKSANDR NEFEDOV © 2026</span>
+    <span class="footer__center">BUILT WITH AI · nefedov.tech</span>
+    <span class="footer__right">v2.0.0</span>
+  </footer>
+
+  <!-- Scripts: Three.js must load before hero.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
