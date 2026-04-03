@@ -7,16 +7,10 @@
   var loader     = document.getElementById('loader');
   var loaderFill = document.getElementById('loaderFill');
   var loaderNum  = document.getElementById('loaderNum');
-  var progress   = 0;
   var loaderDone = false;
 
-  var loaderTimer = setInterval(function () {
-    var step = (Math.random() * 2.5) + 0.5;
-    progress = Math.min(progress + step, 97);
-    var rounded = Math.floor(progress);
-    if (loaderNum)  loaderNum.textContent  = rounded;
-    if (loaderFill) loaderFill.style.width = rounded + '%';
-  }, 40);
+  /* Counter is started by the inline script above the loader div.
+     Here we just clear it when done. */
 
   function loadHeroScene() {
     var s = document.createElement('script');
@@ -32,7 +26,7 @@
   function finishLoader() {
     if (loaderDone) return;
     loaderDone = true;
-    clearInterval(loaderTimer);
+    if (window.__ldrT) { clearInterval(window.__ldrT); window.__ldrT = null; }
     if (loaderNum)  loaderNum.textContent  = '100';
     if (loaderFill) loaderFill.style.width = '100%';
     setTimeout(function () {

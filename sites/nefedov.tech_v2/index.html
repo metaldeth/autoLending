@@ -46,6 +46,21 @@
     </div>
     <div class="loader__label">NEFEDOV.TECH · INITIALIZING</div>
   </div>
+  <!-- Inline loader counter: runs immediately on parse, no file dependency.
+       Safari on iOS can delay bottom-of-page scripts 10-30s; this bypasses that. -->
+  <script>
+  (function () {
+    var p = 0;
+    var num  = document.getElementById('loaderNum');
+    var fill = document.getElementById('loaderFill');
+    window.__ldrT = setInterval(function () {
+      p = Math.min(p + Math.random() * 2.5 + 0.5, 97);
+      var r = Math.floor(p);
+      if (num)  num.textContent  = r;
+      if (fill) fill.style.width = r + '%';
+    }, 40);
+  }());
+  </script>
 
   <!-- ================================================================
        NAV
@@ -376,7 +391,7 @@
   <!-- Scripts: Three.js must load before hero.js -->
   <!-- Only main.js is synchronous; Three.js + hero.js are loaded dynamically
        after the loader finishes so they never block the main thread on iOS -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
 
 </body>
 
